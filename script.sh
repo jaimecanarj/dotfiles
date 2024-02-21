@@ -42,15 +42,6 @@ sudo ufw enable
 
 sudo systemctl enable reflector.timer
 
-## Instalar AUR Helper yay
-
-sudo git clone https://aur.archlinux.org/yay-git.git
-sudo chown -R jaime:jaime yay-git
-cd yay-git
-makepkg -si --noconfirm
-cd ..
-sudo rm -rf yay-git
-
 ## Ajutar hora reloj linux-windows
 
 sudo timedatectl set-local-rtc 1 --adjust-system-clock
@@ -106,15 +97,12 @@ sudo pacman -S --needed --noconfirm rofi # menú
 sudo pacman -S --needed --noconfirm pavucontrol # audio manager
 sudo pacman -S --needed --noconfirm gpaste # clipboard manager
 sudo pacman -S --needed --noconfirm lxappearance # theme settings
-yay -S --needed --noconfirm alttab # window switcher
 
 ###############################################################################
 #    PAQUETES PROGRAMACIÓN                                                    #
 ###############################################################################
 
 sudo pacman -S --needed --noconfirm code # ide
-yay -S --needed --noconfirm code-marketplace # extensiones
-yay -S --needed --noconfirm hoppscotch-bin # rest/graphql
 
 ###############################################################################
 #    PAQUETES JUEGOS                                                          #
@@ -122,7 +110,6 @@ yay -S --needed --noconfirm hoppscotch-bin # rest/graphql
 
 sudo pacman -S --needed --noconfirm steam # juegos
 sudo pacman -S --needed --noconfirm lutris # wine
-yay -S --needed --noconfirm prismlauncher # minecraft
 
 ###############################################################################
 #    PAQUETES MISCELÁNEA                                                      #
@@ -134,9 +121,3 @@ sudo pacman -S --needed --noconfirm discord # comunicación
 sudo pacman -S --needed --noconfirm picard # tag edit
 sudo pacman -S --needed --noconfirm upower # datos energía dispositivo
 sudo pacman -S --needed --noconfirm gnome-boxes # máquinas virtuales
-yay -S --needed --noconfirm losslesscut-bin # recortar vídeo
-yay -S --needed --noconfirm smile # selector emoji
-yay -S --needed --noconfirm anki # ssr
-yay -S --needed --noconfirm eww-x11 # widgets
-
-
