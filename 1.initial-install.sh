@@ -1,6 +1,14 @@
 #!/bin/bash
 
 ###############################################################################
+#    CONFIGURACIÓN PREVIA                                                     #
+###############################################################################
+
+## Cofigurar pacman
+
+cp pacman.conf /etc/pacman.conf
+
+###############################################################################
 #    PAQUETES BÁSICOS                                                         #
 ###############################################################################
 
@@ -21,31 +29,7 @@ sudo pacman -S --needed --noconfirm bluez # bluetooth
 sudo pacman -S --needed --noconfirm bluez-utils # bluetooth
 sudo pacman -S --needed --noconfirm blueman # bluetooth
 sudo pacman -S --needed --noconfirm polkit-gnome # polkit
-
-###############################################################################
-#    CONFIGURAR SISTEMA                                                       #
-###############################################################################
-
-## Cofigurar pacman
-
-mv pacman.conf /etc/pacman.conf
-
-## Configurar firewall
-
-sudo systemctl enable ufw.service --now # activar firewall
-sudo ufw allow 80/tcp # permitir tráfico http
-sudo ufw allow 443/tcp # permitir tráfico https
-sudo ufw default deny incoming
-sudo ufw default allow outgoing
-sudo ufw enable
-
-## Configurar mirrors
-
-sudo systemctl enable reflector.timer
-
-## Ajutar hora reloj linux-windows
-
-sudo timedatectl set-local-rtc 1 --adjust-system-clock
+sudo pacman -S --needed --noconfirm gtk-engine-murrine # temas gtk
 
 ###############################################################################
 #    PAQUETES TERMINAL                                                        #
@@ -59,6 +43,7 @@ sudo pacman -S --needed --noconfirm bat # cat alternative
 sudo pacman -S --needed --noconfirm eza # ls alternative
 sudo pacman -S --needed --noconfirm gdu # gestor de disco
 sudo pacman -S --needed --noconfirm calcurse # calendario
+sudo pacman -S --needed --noconfirm cmus # música
 
 ###############################################################################
 #    PAQUETES FILE EXPLORER                                                   #
@@ -66,7 +51,7 @@ sudo pacman -S --needed --noconfirm calcurse # calendario
 
 sudo pacman -S --needed --noconfirm thunar # file explorer
 sudo pacman -S --needed --noconfirm gvfs # papelera
-sudo pacman -S --needed --noconfirm thunar-archive-plugin # menu contextual
+sudo pacman -S --needed --noconfirm thunar-archive-plugin # menu comprimidos
 sudo pacman -S --needed --noconfirm thunar-media-tags-plugin # media info
 sudo pacman -S --needed --noconfirm thunar-volman # dispositivos removibles
 sudo pacman -S --needed --noconfirm tumbler # miniaturas
@@ -88,7 +73,6 @@ sudo pacman -S --needed --noconfirm noto-fonts-emoji # emojis
 
 sudo pacman -S --needed --noconfirm firefox # web browser
 sudo pacman -S --needed --noconfirm vlc # video
-sudo pacman -S --needed --noconfirm cmus # música
 sudo pacman -S --needed --noconfirm secrets # password manager
 sudo pacman -S --needed --noconfirm flameshot # captura de pantalla
 sudo pacman -S --needed --noconfirm mupdf # pdf reader
@@ -122,11 +106,3 @@ sudo pacman -S --needed --noconfirm discord # comunicación
 sudo pacman -S --needed --noconfirm picard # tag edit
 sudo pacman -S --needed --noconfirm upower # datos energía dispositivo
 sudo pacman -S --needed --noconfirm gnome-boxes # máquinas virtuales
-
-###############################################################################
-#    PERSONALIZAR SISTEMA                                                     #
-###############################################################################
-
-mv .Xresources ~/ # Configurar ratón
-tar -xf .local/share/icons/TokyoNight-SE.tar.bz2
-mv .local ~

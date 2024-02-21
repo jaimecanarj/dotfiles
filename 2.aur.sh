@@ -1,3 +1,9 @@
+#!/bin/bash
+
+###############################################################################
+#    CONFIGURACIÓN PREVIA                                                     #
+###############################################################################
+
 ## Instalar AUR Helper yay
 
 sudo git clone https://aur.archlinux.org/yay-git.git
