@@ -12,6 +12,7 @@ sudo rm -rf yay-git
 ###############################################################################
 
 yay -S --needed --noconfirm alttab # window switcher
+yay -S --needed --noconfirm bibata-cursor-theme # tema del ratón
 yay -S --needed --noconfirm code-marketplace # extensiones
 yay -S --needed --noconfirm hoppscotch-bin # rest/graphql
 yay -S --needed --noconfirm prismlauncher # minecraft

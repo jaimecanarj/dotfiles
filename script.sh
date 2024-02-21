@@ -5,6 +5,7 @@
 ###############################################################################
 
 sudo pacman -S --needed --noconfirm xorg-xrandr # xrandr
+sudo pacman -S --needed --noconfirm xorg-xsetroot # ratón
 sudo pacman -S --needed --noconfirm pacman-contrib # checkupdates
 sudo pacman -S --needed --noconfirm rebuild-detector # checkrebuild
 sudo pacman -S --needed --noconfirm reflector # mirrors utility
@@ -121,3 +122,11 @@ sudo pacman -S --needed --noconfirm discord # comunicación
 sudo pacman -S --needed --noconfirm picard # tag edit
 sudo pacman -S --needed --noconfirm upower # datos energía dispositivo
 sudo pacman -S --needed --noconfirm gnome-boxes # máquinas virtuales
+
+###############################################################################
+#    PERSONALIZAR SISTEMA                                                     #
+###############################################################################
+
+mv .Xresources ~/ # Configurar ratón
+tar -xf .local/share/icons/TokyoNight-SE.tar.bz2
+mv .local ~
