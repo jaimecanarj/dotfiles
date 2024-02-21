@@ -45,14 +45,15 @@ sudo systemctl enable reflector.timer
 ## Instalar AUR Helper yay
 
 sudo git clone https://aur.archlinux.org/yay-git.git
+chown -R jaime:jaime yay-git
 cd yay-git
 makepkg -si
 cd ..
-rm -rf yay-git
+sudo rm -rf yay-git
 
 ## Ajutar hora reloj linux-windows
 
-timedatectl set-local-rtc 1 --adjust-system-clock
+sudo timedatectl set-local-rtc 1 --adjust-system-clock
 
 ###############################################################################
 #    PAQUETES TERMINAL                                                        #
