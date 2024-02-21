@@ -45,9 +45,9 @@ sudo systemctl enable reflector.timer
 ## Instalar AUR Helper yay
 
 sudo git clone https://aur.archlinux.org/yay-git.git
-chown -R jaime:jaime yay-git
+sudo chown -R jaime:jaime yay-git
 cd yay-git
-makepkg -si
+makepkg -si --noconfirm
 cd ..
 sudo rm -rf yay-git
 
