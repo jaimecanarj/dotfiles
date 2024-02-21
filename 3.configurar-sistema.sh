@@ -29,4 +29,4 @@ cp .Xresources ~/ # Configurar ratón
 mkdir ~/.local/share/icons # Crear carpeta tema iconos
 tar -xf TokyoNight-SE.tar.bz2 -C ~/.local/share/icons/ # Extraer tema iconos 
 mkdir ~/.themes # Crear carpeta tema gtk
-unzip Tokyonight-Dark-BL.zip -d ~/.themes # Copiar tema gtk
+unzip Tokyonight-Dark-BL.zip -d ~/.themes # Extraer tema gtk

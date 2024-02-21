@@ -64,6 +64,8 @@ sudo pacman -S --needed --noconfirm unrar # descomprimir archivos rar
 ###############################################################################
 
 sudo pacman -S --needed --noconfirm noto-fonts # fuentes básicas
+sudo pacman -S --needed --noconfirm ttf-liberation # fuentes metric-compatible
+sudo pacman -S --needed --noconfirm ttf-jetbrains-mono-nerd # fuente mono
 sudo pacman -S --needed --noconfirm noto-fonts-cjk # fuentes japonesas
 sudo pacman -S --needed --noconfirm noto-fonts-emoji # emojis
 
