@@ -64,7 +64,7 @@ sudo pacman -S --needed --noconfirm btop # resource monitor
 sudo pacman -S --needed --noconfirm neofetch # system stats
 sudo pacman -S --needed --noconfirm neovim # text editor
 sudo pacman -S --needed --noconfirm bat # cat alternative
-sudo pacman -S --needed --noconfirm exa # ls alternative
+sudo pacman -S --needed --noconfirm eza # ls alternative
 sudo pacman -S --needed --noconfirm gdu # gestor de disco
 sudo pacman -S --needed --noconfirm calcurse # calendario
 
@@ -129,14 +129,14 @@ yay -S --needed --noconfirm prismlauncher # minecraft
 ###############################################################################
 
 sudo pacman -S --needed --noconfirm amule # transferencia p2p
-sudo pacman -S --needed --noconfirm aria2c # transferencia p2p
+sudo pacman -S --needed --noconfirm aria2 # transferencia p2p
 sudo pacman -S --needed --noconfirm discord # comunicación
 sudo pacman -S --needed --noconfirm picard # tag edit
-sudo pacman -S --needed --noconfirm anki # ssr
 sudo pacman -S --needed --noconfirm upower # datos energía dispositivo
 sudo pacman -S --needed --noconfirm gnome-boxes # máquinas virtuales
 yay -S --needed --noconfirm losslesscut-bin # recortar vídeo
 yay -S --needed --noconfirm smile # selector emoji
+yay -S --needed --noconfirm anki # ssr
 yay -S --needed --noconfirm eww-x11 # widgets
 
 
