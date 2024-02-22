@@ -1,17 +1,12 @@
 #!/bin/bash
 
 ###############################################################################
-#    CONFIGURACIÓN PREVIA                                                     #
-###############################################################################
-
-## Cofigurar pacman
-
-cp pacman.conf /etc/pacman.conf
-
-###############################################################################
 #    PAQUETES BÁSICOS                                                         #
 ###############################################################################
 
+sudo pacman -S --needed --noconfirm qtile # window manager
+sudo pacman -S --needed --noconfirm lightdm # display-manager
+sudo pacman -S --needed --noconfirm lightdm-slick-greeter # greeter
 sudo pacman -S --needed --noconfirm xorg-xrandr # xrandr
 sudo pacman -S --needed --noconfirm xorg-xsetroot # ratón
 sudo pacman -S --needed --noconfirm pacman-contrib # checkupdates
@@ -108,3 +103,17 @@ sudo pacman -S --needed --noconfirm discord # comunicación
 sudo pacman -S --needed --noconfirm picard # tag edit
 sudo pacman -S --needed --noconfirm upower # datos energía dispositivo
 sudo pacman -S --needed --noconfirm gnome-boxes # máquinas virtuales
+
+###############################################################################
+#    PAQUETES AUR                                                             #
+###############################################################################
+
+yay -S --needed --noconfirm alttab # window switcher
+yay -S --needed --noconfirm bibata-cursor-theme # tema del ratón
+yay -S --needed --noconfirm code-marketplace # extensiones
+yay -S --needed --noconfirm hoppscotch-bin # rest/graphql
+yay -S --needed --noconfirm prismlauncher # minecraft
+yay -S --needed --noconfirm losslesscut-bin # recortar vídeo
+yay -S --needed --noconfirm smile # selector emoji
+yay -S --needed --noconfirm anki # ssr
+yay -S --needed --noconfirm eww-x11 # widgets
