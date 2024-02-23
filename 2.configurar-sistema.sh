@@ -4,7 +4,11 @@
 #    CONFIGURAR SISTEMA                                                       #
 ###############################################################################
 
-## Configurar firewall
+# Configurar display manager
+sudo systemctl enable lightdm.service
+sudo cp lightdm.conf /etc/lightdm/lightdm.conf
+
+# Configurar firewall
 
 sudo systemctl enable ufw.service --now # activar firewall
 sudo ufw allow 80/tcp # permitir tráfico http
@@ -13,11 +17,11 @@ sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw enable
 
-## Configurar mirrors
+# Configurar mirrors
 
 sudo systemctl enable reflector.timer
 
-## Ajutar hora reloj linux-windows
+# Ajustar hora reloj linux-windows
 
 sudo timedatectl set-local-rtc 1 --adjust-system-clock
 
