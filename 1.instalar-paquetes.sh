@@ -109,11 +109,11 @@ sudo pacman -S --needed --noconfirm gnome-boxes # máquinas virtuales
 ###############################################################################
 
 yay -S --needed --noconfirm alttab # window switcher
-yay -S --needed --noconfirm bibata-cursor-theme # tema del ratón
+yay -S --needed --noconfirm bibata-cursor-theme-bin # tema del ratón
 yay -S --needed --noconfirm code-marketplace # extensiones
 yay -S --needed --noconfirm hoppscotch-bin # rest/graphql
-yay -S --needed --noconfirm prismlauncher # minecraft
+yay -S --needed --noconfirm prismlauncher-bin # minecraft
 yay -S --needed --noconfirm losslesscut-bin # recortar vídeo
 yay -S --needed --noconfirm smile # selector emoji
-yay -S --needed --noconfirm anki # ssr
+yay -S --needed --noconfirm anki-bin # ssr
 yay -S --needed --noconfirm eww-x11 # widgets
