@@ -1,5 +1,5 @@
 from libqtile import bar, layout, qtile, widget
-from libqtile.config import Click, Drag, Group, Key, Match, Screen
+from libqtile.config import Click, Drag, Group, Key, Match, Screen, ScratchPad, DropDown
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
@@ -202,12 +202,12 @@ focus_on_window_activation = "smart"
 wmname = "Qtile"
 
 # Scratchpad groups
-groups.append(Scratchpad("scratchpad", [
+groups.append(ScratchPad("scratchpad", [
   DropDown("keys", "secrets", width=1, height=1, x=0, y=0, opacity=1)
 ]))
 
 # Scratchpad keybindings
-keys.extends([
+keys.extend([
   Key([mod], 'k', lazy.group['scratchpad'].dropdown_toggle('keys')),
   # Key([mod], 'n', lazy.group['scratchpad'].dropdown_toggle('music')),
 ])
