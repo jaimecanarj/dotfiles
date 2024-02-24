@@ -6,7 +6,7 @@
 
 sudo pacman -S --needed --noconfirm qtile # window manager
 sudo pacman -S --needed --noconfirm lightdm # display-manager
-sudo pacman -S --needed --noconfirm lightdm-slick-greeter # greeter
+sudo pacman -S --needed --noconfirm lightdm-webkit2-greeter # greeter
 sudo pacman -S --needed --noconfirm xorg-xrandr # xrandr
 sudo pacman -S --needed --noconfirm xorg-xsetroot # ratón
 sudo pacman -S --needed --noconfirm pacman-contrib # checkupdates
@@ -14,7 +14,7 @@ sudo pacman -S --needed --noconfirm rebuild-detector # checkrebuild
 sudo pacman -S --needed --noconfirm reflector # mirrors utility
 sudo pacman -S --needed --noconfirm ufw # firewall
 sudo pacman -S --needed --noconfirm picom # compositor
-sudo pacman -S --needed --noconfirm feh # wallpaper/image viewer
+sudo pacman -S --needed --noconfirm feh # wallpaper
 sudo pacman -S --needed --noconfirm dunst # notifications
 sudo pacman -S --needed --noconfirm ntfs-3g # ntfs disk mount
 sudo pacman -S --needed --noconfirm alsa-utils # sonido
@@ -70,6 +70,7 @@ sudo pacman -S --needed --noconfirm noto-fonts-emoji # emojis
 
 sudo pacman -S --needed --noconfirm firefox # web browser
 sudo pacman -S --needed --noconfirm vlc # video
+sudo pacman -S --needed --noconfirm eog # image viewer
 sudo pacman -S --needed --noconfirm secrets # password manager
 sudo pacman -S --needed --noconfirm flameshot # captura de pantalla
 sudo pacman -S --needed --noconfirm mupdf # pdf reader

@@ -35,3 +35,4 @@ tar -xf TokyoNight-SE.tar.bz2 -C ~/.local/share/icons/ # Extraer tema iconos
 mkdir ~/.themes # Crear carpeta tema gtk
 unzip Tokyonight-Dark-BL.zip -d ~/.themes # Extraer tema gtk
 cp -r .config/* ~/.config/ # Copiar archivos de configuración
+sudo cp -r lightdm-tokyonight /usr/share/lightdm-webkit/themes/
