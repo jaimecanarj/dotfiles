@@ -6,7 +6,9 @@
 
 # Configurar display manager
 sudo systemctl enable lightdm.service
-sudo cp lightdm.conf /etc/lightdm/lightdm.conf
+sudo cp lightdm/lightdm.conf /etc/lightdm/lightdm.conf
+sudo cp lightdm/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
+sudo cp -r lightdm/lightdm-tokyonight /usr/share/lightdm-webkit/themes/
 
 # Configurar firewall
 
@@ -35,4 +37,3 @@ tar -xf TokyoNight-SE.tar.bz2 -C ~/.local/share/icons/ # Extraer tema iconos
 mkdir ~/.themes # Crear carpeta tema gtk
 unzip Tokyonight-Dark-BL.zip -d ~/.themes # Extraer tema gtk
 cp -r .config/* ~/.config/ # Copiar archivos de configuración
-sudo cp -r lightdm-tokyonight /usr/share/lightdm-webkit/themes/

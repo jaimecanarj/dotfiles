@@ -1,0 +1,6 @@
+[theme]
+name=tokyonight
+description=tokyonight lightdm theme
+engine=lightdm-webkit2-greeter
+url=index.html
+session=qtile
