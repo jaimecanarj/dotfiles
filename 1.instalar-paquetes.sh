@@ -11,12 +11,12 @@ sudo pacman -S --needed --noconfirm xorg-xrandr # xrandr
 sudo pacman -S --needed --noconfirm xorg-xsetroot # ratón
 sudo pacman -S --needed --noconfirm pacman-contrib # checkupdates
 sudo pacman -S --needed --noconfirm rebuild-detector # checkrebuild
-sudo pacman -S --needed --noconfirm reflector # mirrors utility
+sudo pacman -S --needed --noconfirm reflector # actualizar mirrors
 sudo pacman -S --needed --noconfirm ufw # firewall
 sudo pacman -S --needed --noconfirm picom # compositor
 sudo pacman -S --needed --noconfirm feh # wallpaper
-sudo pacman -S --needed --noconfirm dunst # notifications
-sudo pacman -S --needed --noconfirm ntfs-3g # ntfs disk mount
+sudo pacman -S --needed --noconfirm dunst # notificaciones
+sudo pacman -S --needed --noconfirm ntfs-3g # montar discos ntfs
 sudo pacman -S --needed --noconfirm alsa-utils # sonido
 sudo pacman -S --needed --noconfirm playerctl # sonido
 sudo pacman -S --needed --noconfirm git # gestor versiones
@@ -31,11 +31,11 @@ sudo pacman -S --needed --noconfirm gtk-engine-murrine # temas gtk
 ###############################################################################
 
 sudo pacman -S --needed --noconfirm kitty # terminal
-sudo pacman -S --needed --noconfirm btop # resource monitor
-sudo pacman -S --needed --noconfirm neofetch # system stats
-sudo pacman -S --needed --noconfirm neovim # text editor
-sudo pacman -S --needed --noconfirm bat # cat alternative
-sudo pacman -S --needed --noconfirm eza # ls alternative
+sudo pacman -S --needed --noconfirm btop # monitor recursos
+sudo pacman -S --needed --noconfirm neofetch # datos sistema
+sudo pacman -S --needed --noconfirm neovim # editor texto
+sudo pacman -S --needed --noconfirm bat # alternativa a cat
+sudo pacman -S --needed --noconfirm eza # alternativa a ls
 sudo pacman -S --needed --noconfirm gdu # gestor de disco
 sudo pacman -S --needed --noconfirm calcurse # calendario
 sudo pacman -S --needed --noconfirm cmus # música
@@ -44,10 +44,10 @@ sudo pacman -S --needed --noconfirm cmus # música
 #    PAQUETES FILE EXPLORER                                                   #
 ###############################################################################
 
-sudo pacman -S --needed --noconfirm thunar # file explorer
+sudo pacman -S --needed --noconfirm thunar # explorador archivos
 sudo pacman -S --needed --noconfirm gvfs # papelera
 sudo pacman -S --needed --noconfirm thunar-archive-plugin # menu comprimidos
-sudo pacman -S --needed --noconfirm thunar-media-tags-plugin # media info
+sudo pacman -S --needed --noconfirm thunar-media-tags-plugin # info media
 sudo pacman -S --needed --noconfirm thunar-volman # dispositivos removibles
 sudo pacman -S --needed --noconfirm tumbler # miniaturas
 sudo pacman -S --needed --noconfirm ffmpegthumbnailer # miniaturas
@@ -68,18 +68,18 @@ sudo pacman -S --needed --noconfirm noto-fonts-emoji # emojis
 #    PAQUETES PROGRAMAS BÁSICOS                                               #
 ###############################################################################
 
-sudo pacman -S --needed --noconfirm firefox # web browser
+sudo pacman -S --needed --noconfirm firefox # navegador web
 sudo pacman -S --needed --noconfirm vlc # video
-sudo pacman -S --needed --noconfirm eog # image viewer
-sudo pacman -S --needed --noconfirm secrets # password manager
+sudo pacman -S --needed --noconfirm eog # visor imágenes
+sudo pacman -S --needed --noconfirm secrets # gestor contraseñas
 sudo pacman -S --needed --noconfirm flameshot # captura de pantalla
-sudo pacman -S --needed --noconfirm mupdf # pdf reader
+sudo pacman -S --needed --noconfirm mupdf # lector pdf
 sudo pacman -S --needed --noconfirm gnome-calculator # calculadora
 sudo pacman -S --needed --noconfirm thunderbird # email
 sudo pacman -S --needed --noconfirm rofi # menú
-sudo pacman -S --needed --noconfirm pavucontrol # audio manager
-sudo pacman -S --needed --noconfirm gpaste # clipboard manager
-sudo pacman -S --needed --noconfirm lxappearance # theme settings
+sudo pacman -S --needed --noconfirm pavucontrol # gestor audio
+sudo pacman -S --needed --noconfirm gpaste # gestor portapeles
+sudo pacman -S --needed --noconfirm lxappearance # configurador tema
 
 ###############################################################################
 #    PAQUETES PROGRAMACIÓN                                                    #
@@ -101,7 +101,7 @@ sudo pacman -S --needed --noconfirm lutris # wine
 sudo pacman -S --needed --noconfirm amule # transferencia p2p
 sudo pacman -S --needed --noconfirm aria2 # transferencia p2p
 sudo pacman -S --needed --noconfirm discord # comunicación
-sudo pacman -S --needed --noconfirm picard # tag edit
+sudo pacman -S --needed --noconfirm picard # editar etiquetas música
 sudo pacman -S --needed --noconfirm upower # datos energía dispositivo
 sudo pacman -S --needed --noconfirm gnome-boxes # máquinas virtuales
 
@@ -109,7 +109,7 @@ sudo pacman -S --needed --noconfirm gnome-boxes # máquinas virtuales
 #    PAQUETES AUR                                                             #
 ###############################################################################
 
-yay -S --needed --noconfirm alttab # window switcher
+yay -S --needed --noconfirm alttab # cambiar de ventana
 yay -S --needed --noconfirm bibata-cursor-theme-bin # tema del ratón
 yay -S --needed --noconfirm code-marketplace # extensiones
 yay -S --needed --noconfirm hoppscotch-bin # rest/graphql

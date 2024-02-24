@@ -1,7 +1,8 @@
-from libqtile import bar, layout, qtile, widget
+from libqtile import bar, layout, qtile, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Screen, ScratchPad, DropDown
 from libqtile.lazy import lazy
-from libqtile.utils import guess_terminal
+import subprocess
+import os
 
 mod = "mod4"
 terminal = "kitty"
@@ -203,11 +204,28 @@ wmname = "Qtile"
 
 # Scratchpad groups
 groups.append(ScratchPad("scratchpad", [
-  DropDown("keys", "secrets", width=1, height=1, x=0, y=0, opacity=1)
+  DropDown("terminal", "kitty", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1)
+  DropDown("sistema", "kitty -e btop", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1)
+  DropDown("musica", "kitty -e cmus", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1)
+  DropDown("keys", "secrets", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1)
+  DropDown("correo", "thuderbird", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1)
+  DropDown("explorador", "thunar", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1)
+  DropDown("sonido", "pavucontrol", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1)
 ]))
 
 # Scratchpad keybindings
 keys.extend([
+  Key([mod, "shift"], 'Return', lazy.group['scratchpad'].dropdown_toggle('terminal')),
+  Key([mod], 'n', lazy.group['scratchpad'].dropdown_toggle('musica')),
   Key([mod], 'k', lazy.group['scratchpad'].dropdown_toggle('keys')),
-  # Key([mod], 'n', lazy.group['scratchpad'].dropdown_toggle('music')),
+  Key([mod], 'a', lazy.group['scratchpad'].dropdown_toggle('correo')),
+  Key([mod], 'z', lazy.group['scratchpad'].dropdown_toggle('sistema')),
+  Key([mod, "shift"], 'e', lazy.group['scratchpad'].dropdown_toggle('explorador')),
+  Key([mod, "shift"], 'n', lazy.group['scratchpad'].dropdown_toggle('sonido')),
 ])
+
+# Arrancar con el sistema
+@hook.subscribe.startup_once
+def autostart():
+  home = os.path.expanduser('~/.config/qtile/autostart.sh')
+  subprocess.call([home])
