@@ -204,13 +204,13 @@ wmname = "Qtile"
 
 # Scratchpad groups
 groups.append(ScratchPad("scratchpad", [
-  DropDown("terminal", "kitty", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1)
-  DropDown("sistema", "kitty -e btop", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1)
-  DropDown("musica", "kitty -e cmus", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1)
-  DropDown("keys", "secrets", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1)
-  DropDown("correo", "thuderbird", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1)
-  DropDown("explorador", "thunar", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1)
-  DropDown("sonido", "pavucontrol", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1)
+  DropDown("terminal", "kitty", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
+  DropDown("sistema", "kitty -e btop", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
+  DropDown("musica", "kitty -e cmus", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
+  DropDown("keys", "secrets", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
+  DropDown("correo", "thuderbird", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
+  DropDown("explorador", "thunar", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
+  DropDown("sonido", "pavucontrol", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
 ]))
 
 # Scratchpad keybindings

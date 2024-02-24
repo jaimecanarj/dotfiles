@@ -8,7 +8,7 @@
 sudo systemctl enable lightdm.service
 sudo cp lightdm/lightdm.conf /etc/lightdm/lightdm.conf
 sudo cp lightdm/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
-sudo cp -r lightdm/lightdm-tokyonight /usr/share/lightdm-webkit/themes/
+sudo cp -r lightdm/tokyonight /usr/share/lightdm-webkit/themes/
 
 # Configurar firewall
 
