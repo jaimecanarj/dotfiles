@@ -1,6 +1,8 @@
 from libqtile import bar, layout, qtile, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Screen, ScratchPad, DropDown
 from libqtile.lazy import lazy
+from qtile_extras import widget
+from qtile_extras.widget.decorations import RectDecoration
 import subprocess
 import os
 
@@ -67,15 +69,28 @@ keys = [
   Key([mod], "b", lazy.spawn("firefox"), desc="Firefox"),
   Key([mod, "shift"], "b", lazy.spawn("firefox --private-window"), desc="Firefox privado"),
   Key([mod], "e", lazy.spawn("thunar"), desc="Thunar"),
-  Key([mod], "r", lazy.spawn("rofi -show drun"), desc="Rofi"),
+  Key([mod], "r", lazy.spawn("rofi -show drun -theme ~/.config/rofi/launcher.rasi"), desc="Rofi"),
   Key([mod], "d", lazy.spawn("discord"), desc="Discord"),
   Key([mod], "s", lazy.spawn("steam"), desc="Steam"),
-  Key([mod], "c", lazy.spawn("lutris"), desc="Lutris"),
+  Key([mod, "shift"], "s", lazy.spawn("lutris"), desc="Lutris"),
   Key([mod], "c", lazy.spawn("code"), desc="Code"),
-  Key([mod, "shift"], "m", lazy.spawn("/usr/bin/prismlauncher '--launch' 'Tormekia'"), desc="Minecraft"),
+  Key([mod, "shift"], "m", lazy.spawn("/usr/bin/prismlauncher --launch Tormekia"), desc="Minecraft"),
 ]
 
-groups = [Group(i) for i in "123456789"]
+# groups = [Group(i) for i in "123456789"]
+groups = []
+
+group_names = ["1","2","3","4","5","6"]
+
+group_labels = ["壱","弐","参","四","五","六"]
+
+for i in range(len(group_names)):
+  groups.append(
+    Group(
+      name = group_names[i],
+      label = group_labels[i],
+    )
+  )
 
 for i in groups:
   keys.extend([
@@ -100,10 +115,8 @@ for i in groups:
 layouts = [
   layout.Columns(
     margin=6,
-    border_focus='#32467f',
-    border_normal='#2e324c',
-    border_focus_stack='#a6e3a1',
-    border_normal_stack='#94e2d5',
+    border_focus="#4abaaf",
+    border_normal="#2e324c",
     border_on_single=True
   ),
   layout.Max(),
@@ -120,43 +133,263 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font="sans",
-    fontsize=12,
-    padding=3,
+  font="Noto Sans Bold",
+  fontsize=14,
+  padding=3,
+  foreground="#cdd6f4",
+  background="#11111b",
 )
 extension_defaults = widget_defaults.copy()
 
 screens = [
-    Screen(
-        top=bar.Bar(
-            [
-                widget.CurrentLayout(),
-                widget.GroupBox(),
-                widget.Prompt(),
-                widget.WindowName(),
-                widget.Chord(
-                    chords_colors={
-                        "launch": ("#ff0000", "#ffffff"),
-                    },
-                    name_transform=lambda name: name.upper(),
-                ),
-                widget.TextBox("default config", name="default"),
-                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
-                # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
-                # widget.StatusNotifier(),
-                widget.Systray(),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
-                widget.QuickExit(),
-            ],
-            24,
-            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
-        ),
-        # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
-        # By default we handle these events delayed to already improve performance, however your system might still be struggling
-        # This variable is set to None (no cap) by default, but you can set it to 60 to indicate that you limit it to 60 events per second
-        # x11_drag_polling_rate = 60,
+  Screen(
+    top=bar.Bar([
+      widget.Image(
+        filename="~/.config/qtile/tokyoflag.png",
+        margin=6,
+        mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("rofi -show drun")},
+        decorations=[
+          RectDecoration(
+            group=True,
+            use_widget_background=True,
+            radius=4,
+            filled=True,
+            padding_y=0,
+      )],),
+
+      widget.GroupBox(
+        padding=6,
+        highlight_method="line",
+        font="Noto Sans CJK JP Black",
+        fontsize = 16,
+        this_screen_border="#9a7ecc",
+        this_current_screen_border="#9a7ecc",
+        other_screen_border="#4abaaf",
+        other_current_screen_border="#4abaaf",
+        highlight_color=["#4abaaf","#9a7ecc"],
+        fontshadow=["#1a1b26"],
+        active="#cdd6f4",
+        inactive="#4e5173",
+        decorations=[
+          RectDecoration(
+            group=True,
+            use_widget_background=True,
+            radius=4,
+            filled=True,
+            padding_y=0,
+      )],),
+      widget.Spacer(
+        background="#00000000",
+        length=8,
+      ),
+      widget.TextBox(
+        text="  ",
+        font="JetBrainsMono Nerd Font",
+        fontsize=14,
+        foreground="#11111b",
+        background="#e0af68",
+        decorations=[
+          RectDecoration(
+            group=True,
+            use_widget_background=True,
+            radius=4,
+            filled=True,
+            padding_y=0,
+      )],),
+      widget.CheckUpdates(
+        fmt=' {} ',
+        distro='Arch_yay',
+        font="JetBrainsMono Nerd Font SemiBold",
+        display_format='Updates: {updates} ',
+        no_update_string='Sistema actualizado ',
+        colour_have_updates="#11111b",
+        colour_no_updates="#11111b",
+        background="#e0af68",
+        update_interval=60,  # in seconds
+        padding=0,
+        decorations=[
+          RectDecoration(
+            group=True,
+            use_widget_background=True,
+            radius=4,
+            filled=True,
+            padding_y=0,
+      )],),
+      widget.TextBox(
+        text='',
+        font="JetBrainsMono Nerd Font",
+        fontsize=24,
+        foreground="#4abaaf",
+        background="#e0af68",
+        padding=0,
+        decorations=[
+          RectDecoration(
+            group=True,
+            use_widget_background=True,
+            radius=4,
+            filled=True,
+            padding_y=0,
+      )],),
+      widget.TextBox(
+        text='',
+        font="JetBrainsMono Nerd Font",
+        fontsize=24,
+        foreground="#7aa2f7",
+        background="#4abaaf",
+        padding=0,
+        decorations=[
+          RectDecoration(
+            group=True,
+            use_widget_background=True,
+            radius=4,
+            filled=True,
+            padding_y=0,
+      )],),
+      widget.TextBox(
+        text='',
+        font="JetBrainsMono Nerd Font",
+        fontsize=24,
+        foreground="#9a7ecc",
+        background="#7aa2f7",
+        padding=0,
+        decorations=[
+          RectDecoration(
+            group=True,
+            use_widget_background=True,
+            radius=4,
+            filled=True,
+            padding_y=0,
+      )],),
+      widget.Cmus(
+        font="JetBrainsMono Nerd Font SemiBold",
+        background="#9a7ecc",
+        noplay_color="#11111b",
+        play_color="#cdd6f4",
+        width=200,
+        scroll=True,
+        scroll_fixed_width=True,
+        padding=6,
+        decorations=[
+          RectDecoration(
+            group=True,
+            use_widget_background=True,
+            radius=4,
+            filled=True,
+            padding_y=0,
+      ),],),
+      widget.Spacer(background="#00000000"),
+      widget.Volume(), 
+      widget.CPU(), 
+      widget.Spacer(background="#00000000", length=8),
+      widget.TextBox(
+        text=" 󰥔 ",
+        font="JetBrainsMono Nerd Font",
+        fontsize=16,
+        padding=0,
+        foreground="#11111b",
+        background="#9ece6a",
+      decorations=[
+          RectDecoration(
+            group=True,
+            use_widget_background=True,
+            radius=4,
+            filled=True,
+         ),],),
+      widget.Clock(
+        format="%H:%M |",
+        foreground="#11111b",
+        background="#9ece6a",
+        padding=0,
+        decorations=[
+          RectDecoration(
+            group=True,
+            use_widget_background=True,
+            radius=4,
+            filled=True,
+         ),],),
+      widget.TextBox(
+        text=" 󰸗 ",
+        font="JetBrainsMono Nerd Font",
+        fontsize=16,
+        padding=0,
+        foreground="#11111b",
+        background="#9ece6a",
+      decorations=[
+          RectDecoration(
+            group=True,
+            use_widget_background=True,
+            radius=4,
+            filled=True,
+         ),],),
+    #   widget.GenPollCommand(
+    #     fontsize = 16,
+    #     padding=0,
+    #     foreground="#11111b",
+    #     background="#9ece6a",
+    #     update_interval=1,
+    #     cmd="~/.config/qtile/weekday.sh",
+    #     shell=True,
+    #     decorations=[
+    #       RectDecoration(
+    #         group=True,
+    #         use_widget_background=True,
+    #         radius=4,
+    #         filled=True,
+    #      ),],),
+      widget.Clock(
+        format="%d de %B",
+        foreground="#11111b",
+        background="#9ece6a",
+        padding=0,
+        decorations=[
+          RectDecoration(
+            group=True,
+            use_widget_background=True,
+            radius=4,
+            filled=True,
+         ),],),
+      widget.Sep(
+        padding=6,
+        linewidth=0,
+        background="#9ece6a",
+        decorations=[
+          RectDecoration(
+            group=True,
+            use_widget_background=True,
+            radius=4,
+            filled=True,
+         ),],),
+    ],
+    30,
+    background="#11111b00",
+    margin=6,
     ),
+  ),
+  Screen(
+    top=bar.Bar([
+      widget.Sep(padding=6, linewidth=0,),
+      widget.Image(filename="~/.config/qtile/tokyoflag.png", margin=6, mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("rofi -show drun")}),
+      widget.Sep(padding=6, linewidth=0,),
+      widget.Clock(format="%H:%M | %A, %d de %B",
+      foreground="#cdd6f4"),
+      widget.Sep(padding=6, linewidth=0,),
+      widget.GroupBox(
+          highlight_method="line",
+          font="Noto Sans CJK JP Black",
+          fontsize = 16,
+          this_screen_border="#4abaaf",
+          this_current_screen_border="#4abaaf",
+          other_screen_border="#9a7ecc",
+          other_current_screen_border="#9a7ecc",
+          highlight_color=["#9a7ecc","#4abaaf"],
+          fontshadow=["#1a1b26"],
+          active="#cdd6f4",
+          inactive="#4e5173"),
+    ],
+    30,  # height in px
+    background="#11111b"  # background color
+    ),
+  ),
 ]
 
 mouse = [
@@ -185,8 +418,8 @@ follow_mouse_focus = False
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-  border_focus='#32467f',
-  border_normal='#2e324c',
+  border_focus="#32467f",
+  border_normal="#2e324c",
   border_width=2,
   float_rules=[
     *layout.Floating.default_float_rules,
@@ -205,7 +438,7 @@ wmname = "Qtile"
 # Scratchpad groups
 groups.append(ScratchPad("scratchpad", [
   DropDown("terminal", "kitty", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
-  DropDown("sistema", "kitty -e btop", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
+  DropDown("sistema", "kitty -e btop", width=0.8, height=0.9, x=0.1, y=0.05, opacity=1),
   DropDown("musica", "kitty -e cmus", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
   DropDown("keys", "secrets", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
   DropDown("correo", "thunderbird", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
@@ -215,17 +448,25 @@ groups.append(ScratchPad("scratchpad", [
 
 # Scratchpad keybindings
 keys.extend([
-  Key([mod, "shift"], 'Return', lazy.group['scratchpad'].dropdown_toggle('terminal')),
-  Key([mod], 'n', lazy.group['scratchpad'].dropdown_toggle('musica')),
-  Key([mod], 'k', lazy.group['scratchpad'].dropdown_toggle('keys')),
-  Key([mod], 'a', lazy.group['scratchpad'].dropdown_toggle('correo')),
-  Key([mod], 'z', lazy.group['scratchpad'].dropdown_toggle('sistema')),
-  Key([mod, "shift"], 'e', lazy.group['scratchpad'].dropdown_toggle('explorador')),
-  Key([mod, "shift"], 'n', lazy.group['scratchpad'].dropdown_toggle('sonido')),
+  Key([mod, "shift"], "Return", lazy.group["scratchpad"].dropdown_toggle("terminal")),
+  Key([mod], "n", lazy.group["scratchpad"].dropdown_toggle("musica")),
+  Key([mod], "k", lazy.group["scratchpad"].dropdown_toggle("keys")),
+  Key([mod], "a", lazy.group["scratchpad"].dropdown_toggle("correo")),
+  Key([mod], "z", lazy.group["scratchpad"].dropdown_toggle("sistema")),
+  Key([mod, "shift"], "e", lazy.group["scratchpad"].dropdown_toggle("explorador")),
+  Key([mod, "shift"], "n", lazy.group["scratchpad"].dropdown_toggle("sonido")),
 ])
 
 # Arrancar con el sistema
 @hook.subscribe.startup_once
 def autostart():
-  home = os.path.expanduser('~/.config/qtile/autostart.sh')
+  home = os.path.expanduser("~/.config/qtile/autostart.sh")
   subprocess.call([home])
+
+# Cambiar el reloj de la barra para usar el kanji del día de la semana
+# Hacerlo usando dos widgets, uno para la hora y fecha, otro para el día de la semana con un custom script
+# Cosas a añadir a la barra
+#   bluetooth y ethernet accesos
+#   notificaciones acceso (widget eww)
+#   información sistema (widget eww?)
+#   volumen icono
