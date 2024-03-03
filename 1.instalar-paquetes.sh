@@ -117,4 +117,4 @@ yay -S --needed --noconfirm prismlauncher-bin # minecraft
 yay -S --needed --noconfirm losslesscut-bin # recortar vídeo
 yay -S --needed --noconfirm smile # selector emoji
 yay -S --needed --noconfirm anki-bin # ssr
-yay -S --needed --noconfirm eww-x11 # widgets
+yay -S --needed --noconfirm eww # widgets

@@ -70,8 +70,8 @@ keys = [
   Key([mod], "r", lazy.spawn("rofi -show drun"), desc="Rofi"),
   Key([mod], "d", lazy.spawn("discord"), desc="Discord"),
   Key([mod], "s", lazy.spawn("steam"), desc="Steam"),
+  Key([mod], "c", lazy.spawn("lutris"), desc="Lutris"),
   Key([mod], "c", lazy.spawn("code"), desc="Code"),
-  # Key([mod], "a", lazy.spawn("thunderbird"), desc="Correo"),
   Key([mod, "shift"], "m", lazy.spawn("/usr/bin/prismlauncher '--launch' 'Tormekia'"), desc="Minecraft"),
 ]
 
@@ -208,7 +208,7 @@ groups.append(ScratchPad("scratchpad", [
   DropDown("sistema", "kitty -e btop", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
   DropDown("musica", "kitty -e cmus", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
   DropDown("keys", "secrets", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
-  DropDown("correo", "thuderbird", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
+  DropDown("correo", "thunderbird", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
   DropDown("explorador", "thunar", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
   DropDown("sonido", "pavucontrol", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
 ]))
