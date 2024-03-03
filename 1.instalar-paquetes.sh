@@ -110,6 +110,7 @@ sudo pacman -S --needed --noconfirm gnome-boxes # máquinas virtuales
 ###############################################################################
 
 yay -S --needed --noconfirm alttab # cambiar de ventana
+yay -S --needed --noconfirm qtile-extras # funcionalidad extra qtile
 yay -S --needed --noconfirm bibata-cursor-theme-bin # tema del ratón
 yay -S --needed --noconfirm code-marketplace # extensiones
 yay -S --needed --noconfirm hoppscotch-bin # rest/graphql
