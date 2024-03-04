@@ -463,8 +463,6 @@ def autostart():
   home = os.path.expanduser("~/.config/qtile/autostart.sh")
   subprocess.call([home])
 
-# Cambiar el reloj de la barra para usar el kanji del día de la semana
-# Hacerlo usando dos widgets, uno para la hora y fecha, otro para el día de la semana con un custom script
 # Cosas a añadir a la barra
 #   bluetooth y ethernet accesos
 #   notificaciones acceso (widget eww)

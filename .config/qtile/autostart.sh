@@ -18,3 +18,6 @@ alttab -bg "#1a1b26" -fg "#a9b1d6" -frame "#7aa2f7" -inact "#1a1b26" &
 
 # Iniciar polkit
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown 
+
+#Iniciar thunar
+thunar --daemon &

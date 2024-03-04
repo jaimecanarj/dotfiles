@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Abrir un terminal aquí</name>
+	<submenu></submenu>
+	<unique-id>1679116326170310-1</unique-id>
+	<command>kitty %f</command>
+	<description>Ejemplo de una acción personalizada</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon></icon>
+	<name>Aplanar carpeta</name>
+	<submenu></submenu>
+	<unique-id>1708657176164081-1</unique-id>
+	<command>find . -mindepth 2 -type f -exec mv &quot;{}&quot; . \; &amp;&amp; find . -type d -empty -delete</command>
+	<description>Mueve todos los archivos de las subcarpetas a la carpeta actual</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>visual-studio-code</icon>
+	<name>Abrir proyecto</name>
+	<submenu></submenu>
+	<unique-id>1708658599694133-2</unique-id>
+	<command>code %f</command>
+	<description>Abre una carpeta en Code</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+</actions>
