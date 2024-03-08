@@ -27,6 +27,9 @@ sudo systemctl enable reflector.timer
 
 sudo timedatectl set-local-rtc 1 --adjust-system-clock
 
+# Configurar gvfs para no automontar
+sudo cp ./mtp.mount /usr/share/gvfs/mounts/mtp.mount
+
 ###############################################################################
 #    PERSONALIZAR SISTEMA                                                     #
 ###############################################################################

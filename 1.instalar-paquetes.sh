@@ -5,6 +5,7 @@
 ###############################################################################
 
 sudo pacman -S --needed --noconfirm qtile # window manager
+sudo pacman -S --needed --noconfirm python-dbus-next # window manager
 sudo pacman -S --needed --noconfirm lightdm # display-manager
 sudo pacman -S --needed --noconfirm lightdm-webkit2-greeter # greeter
 sudo pacman -S --needed --noconfirm xorg-xrandr # xrandr
@@ -39,6 +40,7 @@ sudo pacman -S --needed --noconfirm eza # alternativa a ls
 sudo pacman -S --needed --noconfirm gdu # gestor de disco
 sudo pacman -S --needed --noconfirm calcurse # calendario
 sudo pacman -S --needed --noconfirm cmus # música
+sudo pacman -S --needed --noconfirm upower # datos energía dispositivo
 
 ###############################################################################
 #    PAQUETES FILE EXPLORER                                                   #
@@ -69,11 +71,11 @@ sudo pacman -S --needed --noconfirm noto-fonts-emoji # emojis
 ###############################################################################
 
 sudo pacman -S --needed --noconfirm firefox # navegador web
-sudo pacman -S --needed --noconfirm vlc # video
+sudo pacman -S --needed --noconfirm mpv # video
 sudo pacman -S --needed --noconfirm eog # visor imágenes
 sudo pacman -S --needed --noconfirm secrets # gestor contraseñas
 sudo pacman -S --needed --noconfirm flameshot # captura de pantalla
-sudo pacman -S --needed --noconfirm mupdf # lector pdf
+sudo pacman -S --needed --noconfirm evince # lector pdf
 sudo pacman -S --needed --noconfirm gnome-calculator # calculadora
 sudo pacman -S --needed --noconfirm thunderbird # email
 sudo pacman -S --needed --noconfirm rofi # menú
@@ -102,14 +104,12 @@ sudo pacman -S --needed --noconfirm amule # transferencia p2p
 sudo pacman -S --needed --noconfirm aria2 # transferencia p2p
 sudo pacman -S --needed --noconfirm discord # comunicación
 sudo pacman -S --needed --noconfirm picard # editar etiquetas música
-sudo pacman -S --needed --noconfirm upower # datos energía dispositivo
 sudo pacman -S --needed --noconfirm gnome-boxes # máquinas virtuales
 
 ###############################################################################
 #    PAQUETES AUR                                                             #
 ###############################################################################
 
-yay -S --needed --noconfirm alttab # cambiar de ventana
 yay -S --needed --noconfirm qtile-extras # funcionalidad extra qtile
 yay -S --needed --noconfirm bibata-cursor-theme-bin # tema del ratón
 yay -S --needed --noconfirm code-marketplace # extensiones

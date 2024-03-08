@@ -1,0 +1,4 @@
+[Mount]
+Type=mtp
+Exec=/usr/lib/gvfsd-mtp
+AutoMount=false
