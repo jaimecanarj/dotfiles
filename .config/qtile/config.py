@@ -1,8 +1,7 @@
 from libqtile import bar, layout, qtile, widget, hook
-from libqtile.config import Click, Drag, Group, Key, Match, Screen, ScratchPad, DropDown
+from libqtile.config import Click, Drag, Group, Key, Match, ScratchPad, DropDown
 from libqtile.lazy import lazy
-from qtile_extras import widget
-from qtile_extras.widget.decorations import RectDecoration
+from screens import screens
 import subprocess
 import os
 
@@ -27,10 +26,16 @@ keys = [
   Key([mod, "control"], "Right", lazy.layout.grow_right(), desc="Redimensionar a la derecha"),
   Key([mod, "control"], "Down", lazy.layout.grow_down(), desc="Reducir tamaño vertical"),
   Key([mod, "control"], "Up", lazy.layout.grow_up(), desc="Aumentar tamaño vertical"),
-  Key([mod, "shift"], "Return", lazy.layout.toggle_split(), desc="Cambiar entre stack partido y completo"),
   
+  # Mover entre grupos
+  Key([mod], "Tab", lazy.screen.next_group(), desc="Cambiar al siguiente grupo"),
+  Key([mod, "shift"], "Tab", lazy.screen.prev_group(), desc="Cambiar al grupo anterior"),
+
   # Mover entre pantallas
   Key([mod], "space", lazy.next_screen(), desc="Siguiente monitor"),
+
+  # Mover entre programas
+  Key(["mod1"], "Tab", lazy.spawn("rofi -show windowcd -theme ~/.config/rofi/launcher.rasi"), desc="Menu programas"),
 
   # Cerrar ventanas
   Key([mod], "w", lazy.window.kill(), desc="Cerrar ventana"),
@@ -98,14 +103,6 @@ for i in groups:
     Key([mod], i.name, lazy.group[i.name].toscreen(),
       desc="Cambiar al grupo {}".format(i.name)),
 
-    # super + tab para cambiar al grupo siguiente
-    Key([mod], "Tab", lazy.screen.next_group(),
-      desc="Cambiar al siguiente grupo"),
-
-    # super + shift + tab para cambiar al grupo anterior
-    Key([mod, "shift"], "Tab", lazy.screen.prev_group(),
-      desc="Cambiar al grupo anterior"),
-
     # super + shift + numero para mover ventana al grupo
     Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
       desc="Mover ventana al grupo {}".format(i.name)),
@@ -141,257 +138,6 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
-screens = [
-  Screen(
-    top=bar.Bar([
-      widget.Image(
-        filename="~/.config/qtile/tokyoflag.png",
-        margin=6,
-        mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("rofi -show drun")},
-        decorations=[
-          RectDecoration(
-            group=True,
-            use_widget_background=True,
-            radius=4,
-            filled=True,
-            padding_y=0,
-      )],),
-
-      widget.GroupBox(
-        padding=6,
-        highlight_method="line",
-        font="Noto Sans CJK JP Black",
-        fontsize = 16,
-        this_screen_border="#9a7ecc",
-        this_current_screen_border="#9a7ecc",
-        other_screen_border="#4abaaf",
-        other_current_screen_border="#4abaaf",
-        highlight_color=["#4abaaf","#9a7ecc"],
-        fontshadow=["#1a1b26"],
-        active="#cdd6f4",
-        inactive="#4e5173",
-        decorations=[
-          RectDecoration(
-            group=True,
-            use_widget_background=True,
-            radius=4,
-            filled=True,
-            padding_y=0,
-      )],),
-      widget.Spacer(
-        background="#00000000",
-        length=8,
-      ),
-      widget.TextBox(
-        text="  ",
-        font="JetBrainsMono Nerd Font",
-        fontsize=14,
-        foreground="#11111b",
-        background="#e0af68",
-        decorations=[
-          RectDecoration(
-            group=True,
-            use_widget_background=True,
-            radius=4,
-            filled=True,
-            padding_y=0,
-      )],),
-      widget.CheckUpdates(
-        fmt=' {} ',
-        distro='Arch_yay',
-        font="JetBrainsMono Nerd Font SemiBold",
-        display_format='Updates: {updates} ',
-        no_update_string='Sistema actualizado ',
-        colour_have_updates="#11111b",
-        colour_no_updates="#11111b",
-        background="#e0af68",
-        update_interval=60,  # in seconds
-        padding=0,
-        decorations=[
-          RectDecoration(
-            group=True,
-            use_widget_background=True,
-            radius=4,
-            filled=True,
-            padding_y=0,
-      )],),
-      widget.TextBox(
-        text='',
-        font="JetBrainsMono Nerd Font",
-        fontsize=24,
-        foreground="#4abaaf",
-        background="#e0af68",
-        padding=0,
-        decorations=[
-          RectDecoration(
-            group=True,
-            use_widget_background=True,
-            radius=4,
-            filled=True,
-            padding_y=0,
-      )],),
-      widget.TextBox(
-        text='',
-        font="JetBrainsMono Nerd Font",
-        fontsize=24,
-        foreground="#7aa2f7",
-        background="#4abaaf",
-        padding=0,
-        decorations=[
-          RectDecoration(
-            group=True,
-            use_widget_background=True,
-            radius=4,
-            filled=True,
-            padding_y=0,
-      )],),
-      widget.TextBox(
-        text='',
-        font="JetBrainsMono Nerd Font",
-        fontsize=24,
-        foreground="#9a7ecc",
-        background="#7aa2f7",
-        padding=0,
-        decorations=[
-          RectDecoration(
-            group=True,
-            use_widget_background=True,
-            radius=4,
-            filled=True,
-            padding_y=0,
-      )],),
-      widget.Cmus(
-        font="JetBrainsMono Nerd Font SemiBold",
-        background="#9a7ecc",
-        noplay_color="#11111b",
-        play_color="#cdd6f4",
-        width=200,
-        scroll=True,
-        scroll_fixed_width=True,
-        padding=6,
-        decorations=[
-          RectDecoration(
-            group=True,
-            use_widget_background=True,
-            radius=4,
-            filled=True,
-            padding_y=0,
-      ),],),
-      widget.Spacer(background="#00000000"),
-      widget.Volume(), 
-      widget.CPU(), 
-      widget.Spacer(background="#00000000", length=8),
-      widget.TextBox(
-        text=" 󰥔 ",
-        font="JetBrainsMono Nerd Font",
-        fontsize=16,
-        padding=0,
-        foreground="#11111b",
-        background="#9ece6a",
-      decorations=[
-          RectDecoration(
-            group=True,
-            use_widget_background=True,
-            radius=4,
-            filled=True,
-         ),],),
-      widget.Clock(
-        format="%H:%M |",
-        foreground="#11111b",
-        background="#9ece6a",
-        padding=0,
-        decorations=[
-          RectDecoration(
-            group=True,
-            use_widget_background=True,
-            radius=4,
-            filled=True,
-         ),],),
-      widget.TextBox(
-        text=" 󰸗 ",
-        font="JetBrainsMono Nerd Font",
-        fontsize=16,
-        padding=0,
-        foreground="#11111b",
-        background="#9ece6a",
-      decorations=[
-          RectDecoration(
-            group=True,
-            use_widget_background=True,
-            radius=4,
-            filled=True,
-         ),],),
-    #   widget.GenPollCommand(
-    #     fontsize = 16,
-    #     padding=0,
-    #     foreground="#11111b",
-    #     background="#9ece6a",
-    #     update_interval=1,
-    #     cmd="~/.config/qtile/weekday.sh",
-    #     shell=True,
-    #     decorations=[
-    #       RectDecoration(
-    #         group=True,
-    #         use_widget_background=True,
-    #         radius=4,
-    #         filled=True,
-    #      ),],),
-      widget.Clock(
-        format="%d de %B",
-        foreground="#11111b",
-        background="#9ece6a",
-        padding=0,
-        decorations=[
-          RectDecoration(
-            group=True,
-            use_widget_background=True,
-            radius=4,
-            filled=True,
-         ),],),
-      widget.Sep(
-        padding=6,
-        linewidth=0,
-        background="#9ece6a",
-        decorations=[
-          RectDecoration(
-            group=True,
-            use_widget_background=True,
-            radius=4,
-            filled=True,
-         ),],),
-    ],
-    30,
-    background="#11111b00",
-    margin=6,
-    ),
-  ),
-  Screen(
-    top=bar.Bar([
-      widget.Sep(padding=6, linewidth=0,),
-      widget.Image(filename="~/.config/qtile/tokyoflag.png", margin=6, mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("rofi -show drun")}),
-      widget.Sep(padding=6, linewidth=0,),
-      widget.Clock(format="%H:%M | %A, %d de %B",
-      foreground="#cdd6f4"),
-      widget.Sep(padding=6, linewidth=0,),
-      widget.GroupBox(
-          highlight_method="line",
-          font="Noto Sans CJK JP Black",
-          fontsize = 16,
-          this_screen_border="#4abaaf",
-          this_current_screen_border="#4abaaf",
-          other_screen_border="#9a7ecc",
-          other_current_screen_border="#9a7ecc",
-          highlight_color=["#9a7ecc","#4abaaf"],
-          fontshadow=["#1a1b26"],
-          active="#cdd6f4",
-          inactive="#4e5173"),
-    ],
-    30,  # height in px
-    background="#11111b"  # background color
-    ),
-  ),
-]
-
 mouse = [
   # Mover ventana flotante
   Drag([mod], "Button1", lazy.window.set_position_floating(),
@@ -418,7 +164,7 @@ follow_mouse_focus = False
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-  border_focus="#32467f",
+  border_focus="#4abaaf",
   border_normal="#2e324c",
   border_width=2,
   float_rules=[
@@ -429,6 +175,7 @@ floating_layout = layout.Floating(
     Match(wm_class="ssh-askpass"),  # ssh-askpass
     Match(title="branchdialog"),  # gitk
     Match(title="pinentry"),  # GPG key password entry
+    Match(wm_class="gnome-calculator"),
   ]
 )
 auto_fullscreen = True
@@ -463,8 +210,13 @@ def autostart():
   home = os.path.expanduser("~/.config/qtile/autostart.sh")
   subprocess.call([home])
 
-# Cosas a añadir a la barra
-#   bluetooth y ethernet accesos
-#   notificaciones acceso (widget eww)
-#   información sistema (widget eww?)
-#   volumen icono
+# Hacer mpv tiled
+@hook.subscribe.client_new
+def disable_floating(window):
+    rules = [
+        Match(wm_class="mpv")
+    ]
+
+    if any(window.match(rule) for rule in rules):
+        window.togroup(qtile.current_group.name)
+        window.cmd_disable_floating()
