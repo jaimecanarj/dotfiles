@@ -114,7 +114,7 @@ yay -S --needed --noconfirm qtile-extras # funcionalidad extra qtile
 yay -S --needed --noconfirm bibata-cursor-theme-bin # tema del ratón
 yay -S --needed --noconfirm code-marketplace # extensiones
 yay -S --needed --noconfirm hoppscotch-bin # rest/graphql
-yay -S --needed --noconfirm prismlauncher-bin # minecraft
+yay -S --needed --noconfirm prismlauncher-qt5-bin # minecraft
 yay -S --needed --noconfirm losslesscut-bin # recortar vídeo
 yay -S --needed --noconfirm smile # selector emoji
 yay -S --needed --noconfirm anki-bin # ssr

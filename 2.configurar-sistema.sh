@@ -27,6 +27,9 @@ sudo systemctl enable reflector.timer
 
 sudo timedatectl set-local-rtc 1 --adjust-system-clock
 
+# Configurar bluetooth
+sudo systemctl enable bluetooth
+
 # Configurar gvfs para no automontar
 sudo cp ./mtp.mount /usr/share/gvfs/mounts/mtp.mount
 
@@ -41,4 +44,5 @@ mkdir ~/.themes # Crear carpeta tema gtk
 unzip Tokyonight-Dark-BL.zip -d ~/.themes # Extraer tema gtk
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim #Instalar NvChad
 cp -r .config/* ~/.config/ # Copiar archivos de configuración
+cp -r .local/* ~/.local/ # Copiar archivos de configuración
 bat cache --build # Actualizar temas de bat

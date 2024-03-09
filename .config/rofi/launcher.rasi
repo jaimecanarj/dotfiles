@@ -15,8 +15,9 @@ configuration {
     display-run:                "";
     display-filebrowser:        "";
     display-window:             "";
+    display-windowcd:           "";
 	drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
-	window-format:              "{w} · {c} · {t}";
+	window-format:              "{c}  {t}";
 }
 
 /*****----- Global Properties -----*****/
@@ -27,6 +28,7 @@ configuration {
     selected:       #33467CFF;
     active:         #414868FF;
     urgent:         #F7768EFF;
+    active-selected: #4ABAAFFF;
     font: "Mono 10";
 }
 
@@ -46,7 +48,7 @@ configuration {
     selected-normal-foreground:  var(background);
     selected-urgent-background:  var(active);
     selected-urgent-foreground:  var(background);
-    selected-active-background:  var(urgent);
+    selected-active-background:  var(active-selected);
     selected-active-foreground:  var(background);
     alternate-normal-background: var(background);
     alternate-normal-foreground: var(foreground);
