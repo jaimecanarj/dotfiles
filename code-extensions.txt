@@ -1,0 +1,9 @@
+bradlc.vscode-tailwindcss
+christian-kohler.path-intellisense
+enkia.tokyo-night
+esbenp.prettier-vscode
+formulahendry.auto-rename-tag
+nucllear.vscode-extension-auto-import
+oderwat.indent-rainbow
+ritwickdey.liveserver
+vscode-icons-team.vscode-icons

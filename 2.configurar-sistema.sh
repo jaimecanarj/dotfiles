@@ -38,6 +38,7 @@ sudo cp ./mtp.mount /usr/share/gvfs/mounts/mtp.mount
 ###############################################################################
 
 cp .Xresources ~/ # Configurar ratón
+cp .bashrc ~/ # Configurar sesión
 mkdir ~/.local/share/icons # Crear carpeta tema iconos
 tar -xf TokyoNight-SE.tar.bz2 -C ~/.local/share/icons/ # Extraer tema iconos 
 mkdir ~/.themes # Crear carpeta tema gtk
@@ -46,3 +47,4 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim #Ins
 cp -r .config/* ~/.config/ # Copiar archivos de configuración
 cp -r .local/* ~/.local/ # Copiar archivos de configuración
 bat cache --build # Actualizar temas de bat
+cat code-extensions.txt | xargs -n 1 code --install-extension # Instalar extensiones code

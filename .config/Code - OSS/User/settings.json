@@ -1,0 +1,44 @@
+{
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.iconTheme": "vscode-icons",
+  "editor.fontSize": 16,
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontLigatures": true,
+  "editor.wordWrap": "on",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "workbench.editor.enablePreview": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.compactFolders": false,
+
+  "workbench.startupEditor": "newUntitledFile",
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "security.workspace.trust.enabled": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "window.menuBarVisibility": "toggle",
+  "extensions.ignoreRecommendations": true,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorWidth": 4,
+  "editor.renderWhitespace": "none",
+  "terminal.integrated.env.linux": {},
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.activityBar.location": "hidden",
+  "workbench.editor.tabActionCloseVisibility": false,
+  "indentRainbow.colors": [
+    "rgba(38, 70, 83,0.15)",
+    "rgba(42, 157, 143,0.15)",
+    "rgba(233, 196, 106, 0.15)",
+    "rgba(244, 162, 97,0.15)",
+    "rgba(231, 111, 81,0.15)",
+    "rgba(231, 111, 81,0.1)",
+    "rgba(231, 111, 81,0.05)",
+    "rgba(231, 111, 81,0.025)"
+  ],
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "editor.stickyScroll.enabled": false
+}
