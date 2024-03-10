@@ -71,7 +71,7 @@ sudo pacman -S --needed --noconfirm noto-fonts-emoji # emojis
 ###############################################################################
 
 sudo pacman -S --needed --noconfirm firefox # navegador web
-sudo pacman -S --needed --noconfirm mpv # video
+sudo pacman -S --needed --noconfirm vlc # video
 sudo pacman -S --needed --noconfirm eog # visor imágenes
 sudo pacman -S --needed --noconfirm secrets # gestor contraseñas
 sudo pacman -S --needed --noconfirm flameshot # captura de pantalla
@@ -95,6 +95,9 @@ sudo pacman -S --needed --noconfirm code # ide
 
 sudo pacman -S --needed --noconfirm steam # juegos
 sudo pacman -S --needed --noconfirm lutris # wine
+sudo pacman -S --needed --noconfirm gamemode # daemon rendimiento
+sudo pacman -S --needed --noconfirm mangohud # overlay rendimiento
+sudo pacman -S --needed --noconfirm lib32-mangohud # overlay rendimiento
 
 ###############################################################################
 #    PAQUETES MISCELÁNEA                                                      #

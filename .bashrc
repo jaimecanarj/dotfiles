@@ -14,3 +14,6 @@ bind '"\e[B":history-search-forward'
 if [ -f /home/jaime/.config/synth-shell/synth-shell-prompt.sh ] && [ -n "$( echo $- | grep i )" ]; then
   source /home/jaime/.config/synth-shell/synth-shell-prompt.sh
 fi
+
+## Alias
+alias ls="eza --icons"

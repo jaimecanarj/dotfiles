@@ -39,6 +39,8 @@ sudo cp ./mtp.mount /usr/share/gvfs/mounts/mtp.mount
 
 cp .Xresources ~/ # Configurar ratón
 cp .bashrc ~/ # Configurar sesión
+cp .bash_profile ~/ # Configurar sesión
+cp .alsoftrc ~/ # Configurar sonido
 mkdir ~/.local/share/icons # Crear carpeta tema iconos
 tar -xf TokyoNight-SE.tar.bz2 -C ~/.local/share/icons/ # Extraer tema iconos 
 mkdir ~/.themes # Crear carpeta tema gtk
