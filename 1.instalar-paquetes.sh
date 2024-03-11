@@ -80,7 +80,7 @@ sudo pacman -S --needed --noconfirm gnome-calculator # calculadora
 sudo pacman -S --needed --noconfirm thunderbird # email
 sudo pacman -S --needed --noconfirm rofi # menú
 sudo pacman -S --needed --noconfirm pavucontrol # gestor audio
-sudo pacman -S --needed --noconfirm gpaste # gestor portapeles
+sudo pacman -S --needed --noconfirm copyq # gestor portapeles
 sudo pacman -S --needed --noconfirm lxappearance # configurador tema
 
 ###############################################################################
@@ -121,7 +121,7 @@ yay -S --needed --noconfirm prismlauncher-qt5-bin # minecraft
 yay -S --needed --noconfirm losslesscut-bin # recortar vídeo
 yay -S --needed --noconfirm smile # selector emoji
 yay -S --needed --noconfirm anki-bin # ssr
-yay -S --needed --noconfirm eww # widgets
+yay -S --needed --noconfirm qt5-styleplugins # tema oscuro qt
 
 ###############################################################################
 #    PAQUETES LUTRIS                                                          #

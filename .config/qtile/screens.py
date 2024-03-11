@@ -66,6 +66,7 @@ screens = [
         no_update_string='Sistema actualizado ',
         colour_have_updates="#11111b",
         colour_no_updates="#11111b",
+        foreground="#11111b",
         background="#e0af68",
         update_interval=60,  # in seconds
         padding=0,

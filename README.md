@@ -14,7 +14,7 @@
 - Iniciar sesión en discord
 - Iniciar sesión en prismlauncher
 - Cambiar tema a cmus
-- Añadir wine como ejecutor
+- Configurar lutris para usar mangohud y añadir wine como ejecutor
 
 ### Archivos personales
 

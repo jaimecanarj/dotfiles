@@ -15,3 +15,9 @@ xset m 0 0
 
 # Iniciar polkit
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+# Iniciar notificaciones
+dunst &
+
+# Iniciar gestor portapapeles
+copyq --start-server
