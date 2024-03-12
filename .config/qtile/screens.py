@@ -61,6 +61,7 @@ screens = [
       widget.CheckUpdates(
         fmt=' {} ',
         distro='Arch_yay',
+        custom_command="checkupdates && yay -Qua",
         font="JetBrainsMono Nerd Font SemiBold",
         display_format='Updates: {updates} ',
         no_update_string='Sistema actualizado ',
@@ -536,6 +537,7 @@ screens = [
       widget.CheckUpdates(
         fmt=' {} ',
         distro='Arch_yay',
+        custom_command="checkupdates && yay -Qua",
         font="JetBrainsMono Nerd Font SemiBold",
         display_format='Updates: {updates} ',
         no_update_string='Sistema actualizado ',

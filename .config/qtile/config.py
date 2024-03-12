@@ -80,6 +80,7 @@ keys = [
   Key([mod, "shift"], "s", lazy.spawn("lutris"), desc="Lutris"),
   Key([mod], "c", lazy.spawn("code"), desc="Code"),
   Key([mod, "shift"], "m", lazy.spawn("/usr/bin/prismlauncher --launch Tormekia"), desc="Minecraft"),
+  Key([mod], "period", lazy.spawn("smile"), desc="emoticonos"),
 ]
 
 # groups = [Group(i) for i in "123456789"]
@@ -176,6 +177,7 @@ floating_layout = layout.Floating(
     Match(title="branchdialog"),  # gitk
     Match(title="pinentry"),  # GPG key password entry
     Match(wm_class="gnome-calculator"),
+    Match(wm_class="smile"),
   ]
 )
 auto_fullscreen = True

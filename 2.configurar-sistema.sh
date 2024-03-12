@@ -42,7 +42,7 @@ cp .bash_profile ~/ # Configurar sesión
 cp .bashrc ~/ # Configurar sesión
 cp .gtkrc-2.0 ~/ # Configuración gtk
 cp .Xresources ~/ # Configurar ratón
-mkdir ~/.local/share/icons # Crear carpeta tema iconos
+mkdir -p ~/.local/share/icons # Crear carpeta tema iconos
 unzip TokyoNight-SE.zip -d ~/.local/share/icons/ # Extraer tema iconos 
 mkdir ~/.themes # Crear carpeta tema gtk
 unzip Tokyonight-Dark-BL.zip -d ~/.themes # Extraer tema gtk
@@ -50,3 +50,5 @@ git clone https://github.com/NvChad/starter ~/.config/nvim && nvim #Instalar NvC
 cp -r .config/* ~/.config/ # Copiar archivos de configuración
 bat cache --build # Actualizar temas de bat
 cat code-extensions.txt | xargs -n 1 code --install-extension # Instalar extensiones code
+mkdir ~/.local/share/PrismLauncher
+cp prismlauncher.cfg ~/.local/share/PrismLauncher/

@@ -13,8 +13,8 @@
 - Iniciar sesión en steam y añadir biblioteca
 - Iniciar sesión en discord
 - Iniciar sesión en prismlauncher
-- Cambiar tema a cmus
 - Configurar lutris para usar mangohud y añadir wine como ejecutor
+- Indicar archivo a abrir con secrets
 
 ### Archivos personales
 
@@ -23,5 +23,4 @@
 - Copiar partida minecraft a .local/share/PrismLauncher/instances/
 - Copiar playlists y base de datos de cmus a .config/cmus/
 - Copiar appointments de calcurse a .config/calcurse/
-- Indicar archivo a abrir con secrets
 - Importar mazo de anki

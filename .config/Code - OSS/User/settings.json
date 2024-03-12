@@ -40,5 +40,6 @@
   ],
   "editor.detectIndentation": false,
   "editor.tabSize": 2,
-  "editor.stickyScroll.enabled": false
+  "editor.stickyScroll.enabled": false,
+  "git.openRepositoryInParentFolders": "always"
 }
