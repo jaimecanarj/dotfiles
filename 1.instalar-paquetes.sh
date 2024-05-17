@@ -93,6 +93,7 @@ sudo pacman -S --needed --noconfirm code # ide
 #    PAQUETES JUEGOS                                                          #
 ###############################################################################
 
+sudo pacman -S --needed --noconfirm lib32-nvidia-utils # vulkan
 sudo pacman -S --needed --noconfirm steam # juegos
 sudo pacman -S --needed --noconfirm lutris # wine
 sudo pacman -S --needed --noconfirm gamemode # daemon rendimiento

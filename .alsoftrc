@@ -1,2 +1,5 @@
 [general]
 drivers = pulse
+
+[pulse]
+allow-moves=yes

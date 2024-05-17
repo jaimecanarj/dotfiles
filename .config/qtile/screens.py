@@ -60,8 +60,7 @@ screens = [
       )],),
       widget.CheckUpdates(
         fmt=' {} ',
-        distro='Arch_yay',
-        custom_command="checkupdates && yay -Qua",
+        distro="Arch_checkupdates",
         font="JetBrainsMono Nerd Font SemiBold",
         display_format='Updates: {updates} ',
         no_update_string='Sistema actualizado ',
@@ -69,7 +68,7 @@ screens = [
         colour_no_updates="#11111b",
         foreground="#11111b",
         background="#e0af68",
-        update_interval=60,  # in seconds
+        update_interval=900,  # in seconds
         padding=0,
         decorations=[
           RectDecoration(
@@ -536,15 +535,15 @@ screens = [
       )],),
       widget.CheckUpdates(
         fmt=' {} ',
-        distro='Arch_yay',
-        custom_command="checkupdates && yay -Qua",
+        distro="Arch_yay",
         font="JetBrainsMono Nerd Font SemiBold",
         display_format='Updates: {updates} ',
         no_update_string='Sistema actualizado ',
         colour_have_updates="#11111b",
         colour_no_updates="#11111b",
+        foreground="#11111b",
         background="#e0af68",
-        update_interval=60,  # in seconds
+        update_interval=900,  # in seconds
         padding=0,
         decorations=[
           RectDecoration(

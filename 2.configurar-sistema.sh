@@ -33,6 +33,9 @@ sudo systemctl enable bluetooth
 # Configurar gvfs para no automontar
 sudo cp ./mtp.mount /usr/share/gvfs/mounts/mtp.mount
 
+# Asignar thunar como explorador de archivos
+xdg-mime default thunar.desktop inode/directory
+
 ###############################################################################
 #    PERSONALIZAR SISTEMA                                                     #
 ###############################################################################

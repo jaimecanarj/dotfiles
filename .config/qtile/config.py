@@ -170,14 +170,10 @@ floating_layout = layout.Floating(
   border_width=2,
   float_rules=[
     *layout.Floating.default_float_rules,
-    Match(wm_class="confirmreset"),  # gitk
-    Match(wm_class="makebranch"),  # gitk
-    Match(wm_class="maketag"),  # gitk
-    Match(wm_class="ssh-askpass"),  # ssh-askpass
-    Match(title="branchdialog"),  # gitk
     Match(title="pinentry"),  # GPG key password entry
-    Match(wm_class="gnome-calculator"),
-    Match(wm_class="smile"),
+    Match(wm_class="gnome-calculator"), #calculadora
+    Match(wm_class="smile"), #emoticonos
+    Match(title="ContentDialogOverlayWindow"), #ryujinx
   ]
 )
 auto_fullscreen = True
