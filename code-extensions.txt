@@ -1,9 +1,9 @@
 bradlc.vscode-tailwindcss
+catppuccin.catppuccin-vsc
+catppuccin.catppuccin-vsc-icons
 christian-kohler.path-intellisense
-enkia.tokyo-night
 esbenp.prettier-vscode
 formulahendry.auto-rename-tag
-nucllear.vscode-extension-auto-import
 oderwat.indent-rainbow
+prisma.prisma
 ritwickdey.liveserver
-vscode-icons-team.vscode-icons

@@ -53,5 +53,31 @@
   {
     "key": "ctrl+shift+n",
     "command": "explorer.newFile"
+  },
+  {
+    "key": "ctrl+alt+n",
+    "command": "workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "-workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "explorer.newFolder"
+  },
+  {
+    "key": "ctrl+q",
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+[Period]",
+    "command": "-editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+q",
+    "command": "-workbench.action.quit"
   }
 ]

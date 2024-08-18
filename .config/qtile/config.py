@@ -73,7 +73,7 @@ keys = [
   Key([mod], "Return", lazy.spawn(terminal), desc="Terminal"),
   Key([mod], "b", lazy.spawn("firefox"), desc="Firefox"),
   Key([mod, "shift"], "b", lazy.spawn("firefox --private-window"), desc="Firefox privado"),
-  Key([mod], "e", lazy.spawn("thunar"), desc="Thunar"),
+  Key([mod], "e", lazy.spawn("nautilus --new-window"), desc="Explorador de archivos"),
   Key([mod], "r", lazy.spawn("rofi -show drun -theme ~/.config/rofi/launcher.rasi"), desc="Rofi"),
   Key([mod], "d", lazy.spawn("discord"), desc="Discord"),
   Key([mod], "s", lazy.spawn("steam"), desc="Steam"),
@@ -81,9 +81,10 @@ keys = [
   Key([mod], "c", lazy.spawn("code"), desc="Code"),
   Key([mod, "shift"], "m", lazy.spawn("/usr/bin/prismlauncher --launch Tormekia"), desc="Minecraft"),
   Key([mod], "period", lazy.spawn("smile"), desc="emoticonos"),
+
+  Key([mod, "control"], "l", lazy.spawn("shutdown now"), desc="apagar ordenador"),
 ]
 
-# groups = [Group(i) for i in "123456789"]
 groups = []
 
 group_names = ["1","2","3","4","5","6"]
@@ -113,8 +114,8 @@ for i in groups:
 layouts = [
   layout.Columns(
     margin=6,
-    border_focus="#4abaaf",
-    border_normal="#2e324c",
+    border_focus="#b4befe",
+    border_normal="#1e1e2e",
     border_on_single=True
   ),
   layout.Max(),
@@ -135,7 +136,7 @@ widget_defaults = dict(
   fontsize=14,
   padding=3,
   foreground="#cdd6f4",
-  background="#11111b",
+  background="#1e1e2e",
 )
 extension_defaults = widget_defaults.copy()
 
@@ -154,9 +155,6 @@ mouse = [
   # Cerrar ventana
   Click([], "Button8", lazy.window.kill()),
 
-  # Abrir overlay
-  Click([], "Button9", lazy.spawn("eww open --toggle overlay"))
-
 ]
 
 dgroups_key_binder = None
@@ -165,14 +163,15 @@ follow_mouse_focus = False
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-  border_focus="#4abaaf",
-  border_normal="#2e324c",
+  border_focus="#b4befe",
+  border_normal="#1e1e2e",
   border_width=2,
   float_rules=[
     *layout.Floating.default_float_rules,
     Match(title="pinentry"),  # GPG key password entry
     Match(wm_class="gnome-calculator"), #calculadora
     Match(wm_class="smile"), #emoticonos
+    Match(title="Comprimir"), #comprimir
     Match(title="ContentDialogOverlayWindow"), #ryujinx
   ]
 )
@@ -184,11 +183,11 @@ wmname = "Qtile"
 groups.append(ScratchPad("scratchpad", [
   DropDown("terminal", "kitty", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
   DropDown("sistema", "kitty -e btop", width=0.8, height=0.9, x=0.1, y=0.05, opacity=1),
-  DropDown("musica", "kitty -e cmus", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
+  DropDown("musica", "gnome-music", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
   DropDown("keys", "secrets", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
   DropDown("correo", "thunderbird", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
-  DropDown("explorador", "thunar", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
   DropDown("sonido", "pavucontrol", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
+  DropDown("explorador", "kitty -e yazi", width=0.8, height=0.8, x=0.1, y=0.1, opacity=1),
 ]))
 
 # Scratchpad keybindings
@@ -198,8 +197,8 @@ keys.extend([
   Key([mod], "k", lazy.group["scratchpad"].dropdown_toggle("keys")),
   Key([mod], "a", lazy.group["scratchpad"].dropdown_toggle("correo")),
   Key([mod], "z", lazy.group["scratchpad"].dropdown_toggle("sistema")),
-  Key([mod, "shift"], "e", lazy.group["scratchpad"].dropdown_toggle("explorador")),
   Key([mod, "shift"], "n", lazy.group["scratchpad"].dropdown_toggle("sonido")),
+  Key([mod, "shift"], "e", lazy.group["scratchpad"].dropdown_toggle("explorador")),
 ])
 
 # Arrancar con el sistema

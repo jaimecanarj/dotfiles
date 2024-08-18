@@ -29,8 +29,8 @@ no-prefix: false
 change-cwd: false
 style:
   selected-row:
-    text-color: "#4e5173"
-    background-color: "#4abaaf"
+    text-color: "#313244"
+    background-color: "#b4befe"
   progress-modal:
     current-item-path-max-len: 0
   use-old-size-bar: false

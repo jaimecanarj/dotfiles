@@ -22,13 +22,13 @@ configuration {
 
 /*****----- Global Properties -----*****/
 * {
-    background:     #15161EFF;
-    background-alt: #1A1B26FF;
-    foreground:     #C0CAF5FF;
-    selected:       #33467CFF;
-    active:         #414868FF;
-    urgent:         #F7768EFF;
-    active-selected: #4ABAAFFF;
+    background:     #181825ff;
+    background-alt: #313244ff;
+    foreground:     #cdd6f4ff;
+    selected:       #1e1e2eff;
+    active:         #b4befeff;
+    urgent:         #fab387ff;
+    active-selected: #b4befeff;
     font: "Mono 10";
 }
 

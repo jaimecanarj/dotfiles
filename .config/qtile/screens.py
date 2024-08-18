@@ -8,7 +8,7 @@ screens = [
   Screen(
     top= bar.Bar([
       widget.Image(
-        filename="~/.config/qtile/tokyoflag.png",
+        filename="~/.config/qtile/catppuccin.png",
         margin=6,
         mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("rofi -show drun")},
         decorations=[
@@ -24,14 +24,14 @@ screens = [
         highlight_method="line",
         font="Noto Sans CJK JP Black",
         fontsize = 16,
-        this_screen_border="#9a7ecc",
-        this_current_screen_border="#9a7ecc",
-        other_screen_border="#4abaaf",
-        other_current_screen_border="#4abaaf",
-        highlight_color=["#4abaaf","#9a7ecc"],
-        fontshadow=["#1a1b26"],
+        this_screen_border="#b4befe",
+        this_current_screen_border="#b4befe",
+        other_screen_border="#94e2d5",
+        other_current_screen_border="#94e2d5",
+        highlight_color=["#1e1e2e", "#1e1e2e", "#1e1e2e", "#b4befe"],
+        fontshadow=["#1e1e2e"],
         active="#cdd6f4",
-        inactive="#4e5173",
+        inactive="#6c7086",
         decorations=[
           RectDecoration(
             group=True,
@@ -48,8 +48,8 @@ screens = [
         text="  ",
         font="JetBrainsMono Nerd Font",
         fontsize=16,
-        foreground="#11111b",
-        background="#e0af68",
+        foreground="#1e1e2e",
+        background="#eba0ac",
         decorations=[
           RectDecoration(
             group=True,
@@ -62,12 +62,12 @@ screens = [
         fmt=' {} ',
         distro="Arch_checkupdates",
         font="JetBrainsMono Nerd Font SemiBold",
-        display_format='Updates: {updates} ',
-        no_update_string='Sistema actualizado ',
-        colour_have_updates="#11111b",
-        colour_no_updates="#11111b",
-        foreground="#11111b",
-        background="#e0af68",
+        display_format='Paquetes: {updates} ',
+        no_update_string='Actualizado ',
+        colour_have_updates="#1e1e2e",
+        colour_no_updates="#1e1e2e",
+        foreground="#1e1e2e",
+        background="#eba0ac",
         update_interval=900,  # in seconds
         padding=0,
         decorations=[
@@ -82,8 +82,8 @@ screens = [
         text='',
         font="JetBrainsMono Nerd Font",
         fontsize=24,
-        foreground="#4abaaf",
-        background="#e0af68",
+        foreground="#89b4fa",
+        background="#eba0ac",
         padding=0,
         decorations=[
           RectDecoration(
@@ -97,8 +97,8 @@ screens = [
         text='',
         font="JetBrainsMono Nerd Font",
         fontsize=24,
-        foreground="#7aa2f7",
-        background="#4abaaf",
+        foreground="#cba6f7",
+        background="#89b4fa",
         padding=0,
         decorations=[
           RectDecoration(
@@ -112,8 +112,8 @@ screens = [
         text='',
         font="JetBrainsMono Nerd Font",
         fontsize=24,
-        foreground="#9a7ecc",
-        background="#7aa2f7",
+        foreground="#fab387",
+        background="#cba6f7",
         padding=0,
         decorations=[
           RectDecoration(
@@ -123,16 +123,18 @@ screens = [
             filled=True,
             padding_y=0,
       )],),
-      widget.Cmus(
+      widget.Mpris2(
         font="JetBrainsMono Nerd Font SemiBold",
-        background="#9a7ecc",
-        noplay_color="#11111b",
-        play_color="#cdd6f4",
+        foreground="#1e1e2e",
+        background="#fab387",
         width=200,
+        name="org.gnome.Music",
         scroll=True,
         scroll_delay=1,
         scroll_interval=0.05,
         scroll_fixed_width=True,
+        format="{xesam:title}",
+        paused_text="Pausa",
         padding=6,
         decorations=[
           RectDecoration(
@@ -144,8 +146,8 @@ screens = [
       ),],),
       widget.Spacer(background="#00000000"),
       widget.Volume(
-        background="#11111baa",
-        foreground="#9a7ecc",
+        background="#1e1e2eaa",
+        foreground="#cba6f7",
         padding=6,
         emoji=True,
         emoji_list=["󰖁","󰕿","󰖀","󰕾"],
@@ -159,7 +161,7 @@ screens = [
             padding_y=0,
       ),],),
       widget.Volume(
-        background="#11111baa",
+        background="#1e1e2eaa",
         padding=0,
         decorations=[
           RectDecoration(
@@ -174,8 +176,8 @@ screens = [
         font="JetBrainsMono Nerd Font",
         fontsize=27,
         padding=10,
-        foreground="#4e5173",
-        background="#11111baa",
+        foreground="#585b70",
+        background="#1e1e2eaa",
         decorations=[
           RectDecoration(
             group=True,
@@ -185,8 +187,8 @@ screens = [
             padding_y=0,
       )],),
       widget.Bluetooth(
-        foreground="#4abaaf",
-        background="#11111baa",
+        foreground="#94e2d5",
+        background="#1e1e2eaa",
         fontsize=16,
         device="/dev_E8_EE_CC_88_45_7A",
         symbol_connected="󰋋",
@@ -201,7 +203,7 @@ screens = [
             padding_y=0,
       )],),
       widget.Bluetooth(
-        background="#11111baa",
+        background="#1e1e2eaa",
         device="/dev_E8_EE_CC_88_45_7A",
         device_battery_format="{battery}%",
         device_format=" {battery_level}  - ",
@@ -214,8 +216,8 @@ screens = [
             padding_y=0,
       )],),
       widget.Bluetooth(
-        foreground="#e0af68",
-        background="#11111baa",
+        foreground="#fab387",
+        background="#1e1e2eaa",
         fontsize=16,
         device="/dev_E7_F3_5C_89_B8_72",
         symbol_connected="󰍽",
@@ -230,7 +232,7 @@ screens = [
             padding_y=0,
       )],),
       widget.Bluetooth(
-        background="#11111baa",
+        background="#1e1e2eaa",
         device="/dev_E7_F3_5C_89_B8_72",
         device_battery_format="{battery}%",
         device_format=" {battery_level}",
@@ -243,7 +245,7 @@ screens = [
             padding_y=0,
       )],),
       widget.Sep(
-        background="#11111baa",
+        background="#1e1e2eaa",
         linewidth=0,
         padding=8,
         decorations=[
@@ -260,8 +262,8 @@ screens = [
         font="JetBrainsMono Nerd Font",
         fontsize=16,
         padding=0,
-        foreground="#7aa2f7",
-        background="#11111baa",
+        foreground="#74c7ec",
+        background="#1e1e2eaa",
         decorations=[
           RectDecoration(
             group=True,
@@ -271,7 +273,7 @@ screens = [
             padding_y=0,
       )],),
       widget.CPU(
-        background="#11111baa",
+        background="#1e1e2eaa",
         format="{load_percent: .0f}% - ",
         padding=0,
         decorations=[
@@ -283,8 +285,9 @@ screens = [
             padding_y=0,
       )],),
       widget.ThermalSensor(
-        background="#11111baa",
+        background="#1e1e2eaa",
         format="{temp: .0f}ºC",
+        threshold=80,
         tag_sensor="Tctl",
         padding=0,
         decorations=[
@@ -300,8 +303,8 @@ screens = [
         font="JetBrainsMono Nerd Font",
         fontsize=27,
         padding=10,
-        foreground="#4e5173",
-        background="#11111baa",
+        foreground="#585b70",
+        background="#1e1e2eaa",
         decorations=[
           RectDecoration(
             group=True,
@@ -315,8 +318,8 @@ screens = [
         font="JetBrainsMono Nerd Font",
         fontsize=17,
         padding=0,
-        foreground="#9ece6a",
-        background="#11111baa",
+        foreground="#a6e3a1",
+        background="#1e1e2eaa",
         decorations=[
           RectDecoration(
             group=True,
@@ -326,7 +329,7 @@ screens = [
             padding_y=0,
       )],),
       NvidiaSensors2(
-        background="#11111baa",
+        background="#1e1e2eaa",
         foreground="#cdd6f4",
         format="{utilization_gpu}% - {temperature_gpu}°C",
         padding=0,
@@ -343,8 +346,8 @@ screens = [
         font="JetBrainsMono Nerd Font",
         fontsize=27,
         padding=10,
-        foreground="#4e5173",
-        background="#11111baa",
+        foreground="#585b70",
+        background="#1e1e2eaa",
         decorations=[
           RectDecoration(
             group=True,
@@ -357,8 +360,8 @@ screens = [
         text="󰘚",
         font="JetBrainsMono Nerd Font",
         fontsize=17,
-        foreground="#e0af68",
-        background="#11111baa",
+        foreground="#eba0ac",
+        background="#1e1e2eaa",
         decorations=[
           RectDecoration(
             group=True,
@@ -368,7 +371,7 @@ screens = [
             padding_y=0,
       )],),
       widget.Memory(
-        background="#11111baa",
+        background="#1e1e2eaa",
         format="{MemUsed: .2f}{mm}b",
         measure_mem="G",
         padding=0,
@@ -381,7 +384,7 @@ screens = [
             padding_y=0,
       )],),
       widget.Sep(
-        background="#11111baa",
+        background="#1e1e2eaa",
         linewidth=0,
         padding=10,
         decorations=[
@@ -399,7 +402,7 @@ screens = [
         fontsize=16,
         padding=0,
         foreground="#11111b",
-        background="#9ece6a",
+        background="#a6e3a1",
       decorations=[
           RectDecoration(
             group=True,
@@ -411,7 +414,7 @@ screens = [
       widget.Clock(
         format="%H:%M",
         foreground="#11111b",
-        background="#9ece6a",
+        background="#a6e3a1",
         padding=0,
         decorations=[
           RectDecoration(
@@ -427,7 +430,7 @@ screens = [
         fontsize=27,
         padding=10,
         foreground="#11111b",
-        background="#9ece6a",
+        background="#a6e3a1",
         decorations=[
           RectDecoration(
             group=True,
@@ -442,7 +445,7 @@ screens = [
         fontsize=16,
         padding=0,
         foreground="#11111b",
-        background="#9ece6a",
+        background="#a6e3a1",
       decorations=[
           RectDecoration(
             group=True,
@@ -454,7 +457,7 @@ screens = [
       widget.Clock(
         format="%d de %B",
         foreground="#11111b",
-        background="#9ece6a",
+        background="#a6e3a1",
         padding=0,
         decorations=[
           RectDecoration(
@@ -465,9 +468,9 @@ screens = [
             padding_y=0,
       ),],),
       widget.Sep(
-        padding=6,
+        padding=10,
         linewidth=0,
-        background="#9ece6a",
+        background="#a6e3a1",
         decorations=[
           RectDecoration(
             group=True,
@@ -477,13 +480,13 @@ screens = [
             padding_y=0,
       ),],),],
       30,
-      background="#11111b00",
+      background="#1e1e2e00",
       margin=6,
   )),
   Screen(
     top= bar.Bar([
       widget.Image(
-        filename="~/.config/qtile/tokyoflag.png",
+        filename="~/.config/qtile/catppuccin.png",
         margin=6,
         mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("rofi -show drun")},
         decorations=[
@@ -499,12 +502,12 @@ screens = [
         highlight_method="line",
         font="Noto Sans CJK JP Black",
         fontsize = 16,
-        this_screen_border="#4abaaf",
-        this_current_screen_border="#4abaaf",
-        other_screen_border="#9a7ecc",
-        other_current_screen_border="#9a7ecc",
-        highlight_color=["#9a7ecc","#4abaaf"],
-        fontshadow=["#1a1b26"],
+        this_screen_border="#94e2d5",
+        this_current_screen_border="#94e2d5",
+        other_screen_border="#b4befe",
+        other_current_screen_border="#b4befe",
+        highlight_color=["#1e1e2e", "#1e1e2e", "#1e1e2e", "#94e2d5"],
+        fontshadow=["#1e1e2e"],
         active="#cdd6f4",
         inactive="#4e5173",
         decorations=[
@@ -523,8 +526,8 @@ screens = [
         text="  ",
         font="JetBrainsMono Nerd Font",
         fontsize=16,
-        foreground="#11111b",
-        background="#e0af68",
+        foreground="#1e1e2e",
+        background="#eba0ac",
         decorations=[
           RectDecoration(
             group=True,
@@ -537,12 +540,12 @@ screens = [
         fmt=' {} ',
         distro="Arch_yay",
         font="JetBrainsMono Nerd Font SemiBold",
-        display_format='Updates: {updates} ',
-        no_update_string='Sistema actualizado ',
-        colour_have_updates="#11111b",
-        colour_no_updates="#11111b",
-        foreground="#11111b",
-        background="#e0af68",
+        display_format='Paquetes: {updates} ',
+        no_update_string='Actualizado ',
+        colour_have_updates="#1e1e2e",
+        colour_no_updates="#1e1e2e",
+        foreground="#1e1e2e",
+        background="#eba0ac",
         update_interval=900,  # in seconds
         padding=0,
         decorations=[
@@ -557,8 +560,8 @@ screens = [
         text='',
         font="JetBrainsMono Nerd Font",
         fontsize=24,
-        foreground="#4abaaf",
-        background="#e0af68",
+        foreground="#89b4fa",
+        background="#eba0ac",
         padding=0,
         decorations=[
           RectDecoration(
@@ -572,8 +575,8 @@ screens = [
         text='',
         font="JetBrainsMono Nerd Font",
         fontsize=24,
-        foreground="#7aa2f7",
-        background="#4abaaf",
+        foreground="#cba6f7",
+        background="#89b4fa",
         padding=0,
         decorations=[
           RectDecoration(
@@ -587,8 +590,8 @@ screens = [
         text='',
         font="JetBrainsMono Nerd Font",
         fontsize=24,
-        foreground="#9a7ecc",
-        background="#7aa2f7",
+        foreground="#fab387",
+        background="#cba6f7",
         padding=0,
         decorations=[
           RectDecoration(
@@ -598,16 +601,18 @@ screens = [
             filled=True,
             padding_y=0,
       )],),
-      widget.Cmus(
+      widget.Mpris2(
         font="JetBrainsMono Nerd Font SemiBold",
-        background="#9a7ecc",
-        noplay_color="#11111b",
-        play_color="#cdd6f4",
+        foreground="#1e1e2e",
+        background="#fab387",
         width=200,
+        name="org.gnome.Music",
         scroll=True,
         scroll_delay=1,
         scroll_interval=0.05,
         scroll_fixed_width=True,
+        format="{xesam:title}",
+        paused_text="Pausa",
         padding=6,
         decorations=[
           RectDecoration(
@@ -619,8 +624,8 @@ screens = [
       ),],),
       widget.Spacer(background="#00000000"),
       widget.Volume(
-        background="#11111baa",
-        foreground="#9a7ecc",
+        background="#1e1e2eaa",
+        foreground="#cba6f7",
         padding=6,
         emoji=True,
         emoji_list=["󰖁","󰕿","󰖀","󰕾"],
@@ -634,7 +639,7 @@ screens = [
             padding_y=0,
       ),],),
       widget.Volume(
-        background="#11111baa",
+        background="#1e1e2eaa",
         padding=0,
         decorations=[
           RectDecoration(
@@ -649,8 +654,8 @@ screens = [
         font="JetBrainsMono Nerd Font",
         fontsize=27,
         padding=10,
-        foreground="#4e5173",
-        background="#11111baa",
+        foreground="#585b70",
+        background="#1e1e2eaa",
         decorations=[
           RectDecoration(
             group=True,
@@ -660,8 +665,8 @@ screens = [
             padding_y=0,
       )],),
       widget.Bluetooth(
-        foreground="#4abaaf",
-        background="#11111baa",
+        foreground="#94e2d5",
+        background="#1e1e2eaa",
         fontsize=16,
         device="/dev_E8_EE_CC_88_45_7A",
         symbol_connected="󰋋",
@@ -676,7 +681,7 @@ screens = [
             padding_y=0,
       )],),
       widget.Bluetooth(
-        background="#11111baa",
+        background="#1e1e2eaa",
         device="/dev_E8_EE_CC_88_45_7A",
         device_battery_format="{battery}%",
         device_format=" {battery_level}  - ",
@@ -689,8 +694,8 @@ screens = [
             padding_y=0,
       )],),
       widget.Bluetooth(
-        foreground="#e0af68",
-        background="#11111baa",
+        foreground="#fab387",
+        background="#1e1e2eaa",
         fontsize=16,
         device="/dev_E7_F3_5C_89_B8_72",
         symbol_connected="󰍽",
@@ -705,7 +710,7 @@ screens = [
             padding_y=0,
       )],),
       widget.Bluetooth(
-        background="#11111baa",
+        background="#1e1e2eaa",
         device="/dev_E7_F3_5C_89_B8_72",
         device_battery_format="{battery}%",
         device_format=" {battery_level}",
@@ -718,7 +723,7 @@ screens = [
             padding_y=0,
       )],),
       widget.Sep(
-        background="#11111baa",
+        background="#1e1e2eaa",
         linewidth=0,
         padding=8,
         decorations=[
@@ -735,8 +740,8 @@ screens = [
         font="JetBrainsMono Nerd Font",
         fontsize=16,
         padding=0,
-        foreground="#7aa2f7",
-        background="#11111baa",
+        foreground="#74c7ec",
+        background="#1e1e2eaa",
         decorations=[
           RectDecoration(
             group=True,
@@ -746,7 +751,7 @@ screens = [
             padding_y=0,
       )],),
       widget.CPU(
-        background="#11111baa",
+        background="#1e1e2eaa",
         format="{load_percent: .0f}% - ",
         padding=0,
         decorations=[
@@ -758,8 +763,9 @@ screens = [
             padding_y=0,
       )],),
       widget.ThermalSensor(
-        background="#11111baa",
+        background="#1e1e2eaa",
         format="{temp: .0f}ºC",
+        threshold=80,
         tag_sensor="Tctl",
         padding=0,
         decorations=[
@@ -775,8 +781,8 @@ screens = [
         font="JetBrainsMono Nerd Font",
         fontsize=27,
         padding=10,
-        foreground="#4e5173",
-        background="#11111baa",
+        foreground="#585b70",
+        background="#1e1e2eaa",
         decorations=[
           RectDecoration(
             group=True,
@@ -790,8 +796,8 @@ screens = [
         font="JetBrainsMono Nerd Font",
         fontsize=17,
         padding=0,
-        foreground="#9ece6a",
-        background="#11111baa",
+        foreground="#a6e3a1",
+        background="#1e1e2eaa",
         decorations=[
           RectDecoration(
             group=True,
@@ -801,7 +807,7 @@ screens = [
             padding_y=0,
       )],),
       NvidiaSensors2(
-        background="#11111baa",
+        background="#1e1e2eaa",
         foreground="#cdd6f4",
         format="{utilization_gpu}% - {temperature_gpu}°C",
         padding=0,
@@ -818,8 +824,8 @@ screens = [
         font="JetBrainsMono Nerd Font",
         fontsize=27,
         padding=10,
-        foreground="#4e5173",
-        background="#11111baa",
+        foreground="#585b70",
+        background="#1e1e2eaa",
         decorations=[
           RectDecoration(
             group=True,
@@ -832,8 +838,8 @@ screens = [
         text="󰘚",
         font="JetBrainsMono Nerd Font",
         fontsize=17,
-        foreground="#e0af68",
-        background="#11111baa",
+        foreground="#eba0ac",
+        background="#1e1e2eaa",
         decorations=[
           RectDecoration(
             group=True,
@@ -843,7 +849,7 @@ screens = [
             padding_y=0,
       )],),
       widget.Memory(
-        background="#11111baa",
+        background="#1e1e2eaa",
         format="{MemUsed: .2f}{mm}b",
         measure_mem="G",
         padding=0,
@@ -856,7 +862,7 @@ screens = [
             padding_y=0,
       )],),
       widget.Sep(
-        background="#11111baa",
+        background="#1e1e2eaa",
         linewidth=0,
         padding=10,
         decorations=[
@@ -874,7 +880,7 @@ screens = [
         fontsize=16,
         padding=0,
         foreground="#11111b",
-        background="#9ece6a",
+        background="#a6e3a1",
       decorations=[
           RectDecoration(
             group=True,
@@ -886,7 +892,7 @@ screens = [
       widget.Clock(
         format="%H:%M",
         foreground="#11111b",
-        background="#9ece6a",
+        background="#a6e3a1",
         padding=0,
         decorations=[
           RectDecoration(
@@ -902,7 +908,7 @@ screens = [
         fontsize=27,
         padding=10,
         foreground="#11111b",
-        background="#9ece6a",
+        background="#a6e3a1",
         decorations=[
           RectDecoration(
             group=True,
@@ -917,7 +923,7 @@ screens = [
         fontsize=16,
         padding=0,
         foreground="#11111b",
-        background="#9ece6a",
+        background="#a6e3a1",
       decorations=[
           RectDecoration(
             group=True,
@@ -929,7 +935,7 @@ screens = [
       widget.Clock(
         format="%d de %B",
         foreground="#11111b",
-        background="#9ece6a",
+        background="#a6e3a1",
         padding=0,
         decorations=[
           RectDecoration(
@@ -940,9 +946,9 @@ screens = [
             padding_y=0,
       ),],),
       widget.Sep(
-        padding=6,
+        padding=10,
         linewidth=0,
-        background="#9ece6a",
+        background="#a6e3a1",
         decorations=[
           RectDecoration(
             group=True,
@@ -956,6 +962,3 @@ screens = [
       margin=6,
   ))
 ]
-
-# Cosas a añadir a la barra
-#   notificaciones acceso (widget eww)

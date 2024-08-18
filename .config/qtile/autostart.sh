@@ -1,10 +1,7 @@
 #!/bin/sh
 
-# Configurar monitores
-xrandr --output DP-0 --primary --mode 1920x1080 --rate 165 --output HDMI-0 --mode 1920x1080 --rate 75 --right-of DP-0
-
 # Wallpaper
-feh --bg-scale ~/Imágenes/Wallpapers/Fuji\ store.jpg
+feh --bg-scale ~/Imágenes/Wallpapers/cgrdi4O.png
 
 # Compositor
 picom &
@@ -21,3 +18,7 @@ dunst &
 
 # Iniciar gestor portapapeles
 copyq --start-server
+
+# Desactivar salvador de pantalla
+xset s off
+xset -dpms

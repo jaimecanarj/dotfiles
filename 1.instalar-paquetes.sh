@@ -38,23 +38,21 @@ sudo pacman -S --needed --noconfirm neovim # editor texto
 sudo pacman -S --needed --noconfirm bat # alternativa a cat
 sudo pacman -S --needed --noconfirm eza # alternativa a ls
 sudo pacman -S --needed --noconfirm gdu # gestor de disco
-sudo pacman -S --needed --noconfirm calcurse # calendario
-sudo pacman -S --needed --noconfirm cmus # música
 sudo pacman -S --needed --noconfirm upower # datos energía dispositivo
+sudo pacman -S --needed --noconfirm yazi # explorador de archivos
 
 ###############################################################################
 #    PAQUETES FILE EXPLORER                                                   #
 ###############################################################################
 
-sudo pacman -S --needed --noconfirm thunar # explorador archivos
-sudo pacman -S --needed --noconfirm gvfs # papelera
-sudo pacman -S --needed --noconfirm thunar-archive-plugin # menu comprimidos
-sudo pacman -S --needed --noconfirm thunar-media-tags-plugin # info media
-sudo pacman -S --needed --noconfirm thunar-volman # dispositivos removibles
+sudo pacman -S --needed --noconfirm nautilus # explorador archivos
+sudo pacman -S --needed --noconfirm file-roller # compresión
+sudo pacman -S --needed --noconfirm gnome-disk-utility # montar imágenes iso
 sudo pacman -S --needed --noconfirm tumbler # miniaturas
 sudo pacman -S --needed --noconfirm ffmpegthumbnailer # miniaturas
-sudo pacman -S --needed --noconfirm file-roller # compresión
-sudo pacman -S --needed --noconfirm unrar # descomprimir archivos rar
+# sudo pacman -S --needed --noconfirm gvfs # papelera
+# sudo pacman -S --needed --noconfirm gvfs-mtp # montar dispositivos moviles
+# sudo pacman -S --needed --noconfirm unrar # descomprimir archivos rar
 
 ###############################################################################
 #    PAQUETES FUENTES                                                         #
@@ -73,11 +71,13 @@ sudo pacman -S --needed --noconfirm noto-fonts-emoji # emojis
 sudo pacman -S --needed --noconfirm firefox # navegador web
 sudo pacman -S --needed --noconfirm vlc # video
 sudo pacman -S --needed --noconfirm eog # visor imágenes
+sudo pacman -S --needed --noconfirm gnome-music # música
 sudo pacman -S --needed --noconfirm secrets # gestor contraseñas
 sudo pacman -S --needed --noconfirm flameshot # captura de pantalla
 sudo pacman -S --needed --noconfirm evince # lector pdf
 sudo pacman -S --needed --noconfirm gnome-calculator # calculadora
 sudo pacman -S --needed --noconfirm thunderbird # email
+sudo pacman -S --needed --noconfirm gnome-calendar # calendario
 sudo pacman -S --needed --noconfirm rofi # menú
 sudo pacman -S --needed --noconfirm pavucontrol # gestor audio
 sudo pacman -S --needed --noconfirm copyq # gestor portapeles
@@ -88,6 +88,7 @@ sudo pacman -S --needed --noconfirm lxappearance # configurador tema
 ###############################################################################
 
 sudo pacman -S --needed --noconfirm code # ide
+sudo pacman -S --needed --noconfirm github-cli # github
 
 ###############################################################################
 #    PAQUETES JUEGOS                                                          #
@@ -109,6 +110,7 @@ sudo pacman -S --needed --noconfirm aria2 # transferencia p2p
 sudo pacman -S --needed --noconfirm discord # comunicación
 sudo pacman -S --needed --noconfirm picard # editar etiquetas música
 sudo pacman -S --needed --noconfirm gnome-boxes # máquinas virtuales
+sudo pacman -S --needed --noconfirm eartag # editar tags música
 
 ###############################################################################
 #    PAQUETES AUR                                                             #
@@ -117,12 +119,11 @@ sudo pacman -S --needed --noconfirm gnome-boxes # máquinas virtuales
 yay -S --needed --noconfirm qtile-extras # funcionalidad extra qtile
 yay -S --needed --noconfirm bibata-cursor-theme-bin # tema del ratón
 yay -S --needed --noconfirm code-marketplace # extensiones
-yay -S --needed --noconfirm hoppscotch-bin # rest/graphql
 yay -S --needed --noconfirm prismlauncher-qt5-bin # minecraft
 yay -S --needed --noconfirm losslesscut-bin # recortar vídeo
 yay -S --needed --noconfirm smile # selector emoji
-yay -S --needed --noconfirm anki-bin # ssr
 yay -S --needed --noconfirm qt5-styleplugins # tema oscuro qt
+yay -S --needed --noconfirm nautilus-open-any-terminal #plugin nautilus
 
 ###############################################################################
 #    PAQUETES LUTRIS                                                          #

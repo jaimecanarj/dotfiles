@@ -1,6 +1,6 @@
 {
-  "workbench.colorTheme": "Tokyo Night",
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.iconTheme": "catppuccin-mocha",
   "editor.fontSize": 16,
   "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.fontLigatures": true,
@@ -17,7 +17,8 @@
   "security.workspace.trust.enabled": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
+    "javascript": "javascriptreact",
+    "blade": "html"
   },
   "window.menuBarVisibility": "toggle",
   "extensions.ignoreRecommendations": true,
@@ -25,7 +26,6 @@
   "editor.cursorWidth": 4,
   "editor.renderWhitespace": "none",
   "terminal.integrated.env.linux": {},
-  "vsicons.dontShowNewVersionMessage": true,
   "workbench.activityBar.location": "hidden",
   "workbench.editor.tabActionCloseVisibility": false,
   "indentRainbow.colors": [
@@ -41,5 +41,8 @@
   "editor.detectIndentation": false,
   "editor.tabSize": 2,
   "editor.stickyScroll.enabled": false,
-  "git.openRepositoryInParentFolders": "always"
+  "git.openRepositoryInParentFolders": "always",
+  "explorer.sortOrder": "filesFirst",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.snippetSuggestions": "top"
 }

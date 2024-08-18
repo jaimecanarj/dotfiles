@@ -21,6 +21,3 @@
 - Copiar profile firefox a .mozilla/firefox
 - Copiar profile thunderbird a .thunderbird
 - Copiar partida minecraft a .local/share/PrismLauncher/instances/
-- Copiar playlists y base de datos de cmus a .config/cmus/
-- Copiar appointments de calcurse a .config/calcurse/
-- Importar mazo de anki
