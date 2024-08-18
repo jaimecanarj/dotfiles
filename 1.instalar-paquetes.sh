@@ -26,6 +26,7 @@ sudo pacman -S --needed --noconfirm bluez-utils # bluetooth
 sudo pacman -S --needed --noconfirm blueman # bluetooth
 sudo pacman -S --needed --noconfirm polkit-gnome # polkit
 sudo pacman -S --needed --noconfirm gtk-engine-murrine # temas gtk
+sudo pacman -S --needed --noconfirm qt5ct # temas qt
 
 ###############################################################################
 #    PAQUETES TERMINAL                                                        #
