@@ -46,7 +46,7 @@ cp .Xresources ~/ # Configurar ratón
 mkdir -p ~/.local/share/icons # Crear carpeta tema iconos
 tar xf Win11-nord.tar.xz -C ~/.local/share/icons/
 mkdir ~/.themes # Crear carpeta tema gtk
-unzip catppuccin-mocha-lavender-standard+default.zip -d ~/.themes # Extraer tema gtk
+unzip Catppuccin-Mocha-Standard-Lavender-Dark.zip -d ~/.themes # Extraer tema gtk
 git clone https://github.com/NvChad/starter ~/.config/nvim && nvim #Instalar NvChad
 cp -r .config/* ~/.config/ # Copiar archivos de configuración
 bat cache --build # Actualizar temas de bat
