@@ -11,9 +11,10 @@ bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
 ## synth-shell-prompt.sh
-if [ -f /home/jaime/.config/synth-shell/synth-shell-prompt.sh ] && [ -n "$( echo $- | grep i )" ]; then
-  source /home/jaime/.config/synth-shell/synth-shell-prompt.sh
+if [ -f ~/.config/synth-shell/synth-shell-prompt.sh ] && [ -n "$( echo $- | grep i )" ]; then
+  source ~/.config/synth-shell/synth-shell-prompt.sh
 fi
 
 ## Alias
 alias ls="eza --icons"
+alias cat="bat"

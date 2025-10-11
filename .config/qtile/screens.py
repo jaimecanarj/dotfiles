@@ -112,7 +112,7 @@ screens = [
         text='',
         font="JetBrainsMono Nerd Font",
         fontsize=24,
-        foreground="#fab387",
+        foreground="#94e2d5",
         background="#cba6f7",
         padding=0,
         decorations=[
@@ -126,7 +126,7 @@ screens = [
       widget.Mpris2(
         font="JetBrainsMono Nerd Font SemiBold",
         foreground="#1e1e2e",
-        background="#fab387",
+        background="#94e2d5",
         width=200,
         name="org.gnome.Music",
         scroll=True,
@@ -402,7 +402,7 @@ screens = [
         fontsize=16,
         padding=0,
         foreground="#11111b",
-        background="#a6e3a1",
+        background="#bac2de",
       decorations=[
           RectDecoration(
             group=True,
@@ -414,7 +414,7 @@ screens = [
       widget.Clock(
         format="%H:%M",
         foreground="#11111b",
-        background="#a6e3a1",
+        background="#bac2de",
         padding=0,
         decorations=[
           RectDecoration(
@@ -430,7 +430,7 @@ screens = [
         fontsize=27,
         padding=10,
         foreground="#11111b",
-        background="#a6e3a1",
+        background="#bac2de",
         decorations=[
           RectDecoration(
             group=True,
@@ -445,7 +445,7 @@ screens = [
         fontsize=16,
         padding=0,
         foreground="#11111b",
-        background="#a6e3a1",
+        background="#bac2de",
       decorations=[
           RectDecoration(
             group=True,
@@ -457,7 +457,7 @@ screens = [
       widget.Clock(
         format="%d de %B",
         foreground="#11111b",
-        background="#a6e3a1",
+        background="#bac2de",
         padding=0,
         decorations=[
           RectDecoration(
@@ -470,7 +470,7 @@ screens = [
       widget.Sep(
         padding=10,
         linewidth=0,
-        background="#a6e3a1",
+        background="#bac2de",
         decorations=[
           RectDecoration(
             group=True,
@@ -590,7 +590,7 @@ screens = [
         text='',
         font="JetBrainsMono Nerd Font",
         fontsize=24,
-        foreground="#fab387",
+        foreground="#94e2d5",
         background="#cba6f7",
         padding=0,
         decorations=[
@@ -604,7 +604,7 @@ screens = [
       widget.Mpris2(
         font="JetBrainsMono Nerd Font SemiBold",
         foreground="#1e1e2e",
-        background="#fab387",
+        background="#94e2d5",
         width=200,
         name="org.gnome.Music",
         scroll=True,
@@ -880,7 +880,7 @@ screens = [
         fontsize=16,
         padding=0,
         foreground="#11111b",
-        background="#a6e3a1",
+        background="#bac2de",
       decorations=[
           RectDecoration(
             group=True,
@@ -892,7 +892,7 @@ screens = [
       widget.Clock(
         format="%H:%M",
         foreground="#11111b",
-        background="#a6e3a1",
+        background="#bac2de",
         padding=0,
         decorations=[
           RectDecoration(
@@ -908,7 +908,7 @@ screens = [
         fontsize=27,
         padding=10,
         foreground="#11111b",
-        background="#a6e3a1",
+        background="#bac2de",
         decorations=[
           RectDecoration(
             group=True,
@@ -923,7 +923,7 @@ screens = [
         fontsize=16,
         padding=0,
         foreground="#11111b",
-        background="#a6e3a1",
+        background="#bac2de",
       decorations=[
           RectDecoration(
             group=True,
@@ -935,7 +935,7 @@ screens = [
       widget.Clock(
         format="%d de %B",
         foreground="#11111b",
-        background="#a6e3a1",
+        background="#bac2de",
         padding=0,
         decorations=[
           RectDecoration(
@@ -948,7 +948,7 @@ screens = [
       widget.Sep(
         padding=10,
         linewidth=0,
-        background="#a6e3a1",
+        background="#bac2de",
         decorations=[
           RectDecoration(
             group=True,

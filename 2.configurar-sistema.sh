@@ -11,20 +11,20 @@ sudo cp lightdm/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greete
 sudo cp -r lightdm/tokyonight /usr/share/lightdm-webkit/themes/
 
 # Configurar firewall
-
 sudo systemctl enable ufw.service --now # activar firewall
 sudo ufw allow 80/tcp # permitir tráfico http
 sudo ufw allow 443/tcp # permitir tráfico https
+sudo ufw allow 54662/tcp # amule
+sudo ufw allow 54665/udp # amule
+sudo ufw allow 54672/udp # amule
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw enable
 
 # Configurar mirrors
-
 sudo systemctl enable reflector.timer
 
 # Ajustar hora reloj linux-windows
-
 sudo timedatectl set-local-rtc 1 --adjust-system-clock
 
 # Configurar bluetooth
@@ -40,14 +40,13 @@ xdg-mime default nautilus.desktop inode/directory
 cp .alsoftrc ~/ # Configurar sonido
 cp .bash_profile ~/ # Configurar sesión
 cp .bashrc ~/ # Configurar sesión
-cp .gtkrc-2.0 ~/ # Configuración gtk
+cp .gtkrc-2.0 ~/ # Configurar gtk
 cp .xprofile ~/ # Configurar monitores
 cp .Xresources ~/ # Configurar ratón
 mkdir -p ~/.local/share/icons # Crear carpeta tema iconos
-tar xf Win11-nord.tar.xz -C ~/.local/share/icons/
+tar xf Win11-nord.tar.xz -C ~/.local/share/icons/ # Extraer iconos
 mkdir ~/.themes # Crear carpeta tema gtk
 unzip Catppuccin-Mocha-Standard-Lavender-Dark.zip -d ~/.themes # Extraer tema gtk
 git clone https://github.com/NvChad/starter ~/.config/nvim && nvim #Instalar NvChad
 cp -r .config/* ~/.config/ # Copiar archivos de configuración
 bat cache --build # Actualizar temas de bat
-cat code-extensions.txt | xargs -n 1 code --install-extension # Instalar extensiones code

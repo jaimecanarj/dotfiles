@@ -26,6 +26,7 @@ sudo pacman -S --needed --noconfirm bluez-utils # bluetooth
 sudo pacman -S --needed --noconfirm blueman # bluetooth
 sudo pacman -S --needed --noconfirm polkit-gnome # polkit
 sudo pacman -S --needed --noconfirm gtk-engine-murrine # temas gtk
+sudo pacman -S --needed --noconfirm gtk-themes-extra # temas gtk
 sudo pacman -S --needed --noconfirm qt5ct # temas qt
 
 ###############################################################################
@@ -51,9 +52,7 @@ sudo pacman -S --needed --noconfirm file-roller # compresión
 sudo pacman -S --needed --noconfirm gnome-disk-utility # montar imágenes iso
 sudo pacman -S --needed --noconfirm tumbler # miniaturas
 sudo pacman -S --needed --noconfirm ffmpegthumbnailer # miniaturas
-# sudo pacman -S --needed --noconfirm gvfs # papelera
-# sudo pacman -S --needed --noconfirm gvfs-mtp # montar dispositivos moviles
-# sudo pacman -S --needed --noconfirm unrar # descomprimir archivos rar
+sudo pacman -S --needed --noconfirm gvfs-mtp # montar dispositivos moviles
 
 ###############################################################################
 #    PAQUETES FUENTES                                                         #
@@ -72,24 +71,17 @@ sudo pacman -S --needed --noconfirm noto-fonts-emoji # emojis
 sudo pacman -S --needed --noconfirm firefox # navegador web
 sudo pacman -S --needed --noconfirm vlc # video
 sudo pacman -S --needed --noconfirm eog # visor imágenes
-sudo pacman -S --needed --noconfirm gnome-music # música
+sudo pacman -S --needed --noconfirm krita # editor imágenes
 sudo pacman -S --needed --noconfirm secrets # gestor contraseñas
 sudo pacman -S --needed --noconfirm flameshot # captura de pantalla
 sudo pacman -S --needed --noconfirm evince # lector pdf
 sudo pacman -S --needed --noconfirm gnome-calculator # calculadora
-sudo pacman -S --needed --noconfirm thunderbird # email
+sudo pacman -S --needed --noconfirm gnome-music # música
 sudo pacman -S --needed --noconfirm gnome-calendar # calendario
 sudo pacman -S --needed --noconfirm rofi # menú
 sudo pacman -S --needed --noconfirm pavucontrol # gestor audio
 sudo pacman -S --needed --noconfirm copyq # gestor portapeles
 sudo pacman -S --needed --noconfirm lxappearance # configurador tema
-
-###############################################################################
-#    PAQUETES PROGRAMACIÓN                                                    #
-###############################################################################
-
-sudo pacman -S --needed --noconfirm code # ide
-sudo pacman -S --needed --noconfirm github-cli # github
 
 ###############################################################################
 #    PAQUETES JUEGOS                                                          #
@@ -111,20 +103,33 @@ sudo pacman -S --needed --noconfirm aria2 # transferencia p2p
 sudo pacman -S --needed --noconfirm discord # comunicación
 sudo pacman -S --needed --noconfirm picard # editar etiquetas música
 sudo pacman -S --needed --noconfirm gnome-boxes # máquinas virtuales
-sudo pacman -S --needed --noconfirm eartag # editar tags música
+sudo pacman -S --needed --noconfirm github-cli # github
+
+###############################################################################
+#    PAQUETES PROGRAMACIÓN                                                    #
+###############################################################################
+
+sudo pacman -S --needed --noconfirm php #php
+sudo pacman -S --needed --noconfirm php-apache #php
+sudo pacman -S --needed --noconfirm composer #composer
+sudo pacman -S --needed --noconfirm mariadb #mariadb
+sudo pacman -S --needed --noconfirm nodejs #node
+sudo pacman -S --needed --noconfirm npm #npm
 
 ###############################################################################
 #    PAQUETES AUR                                                             #
 ###############################################################################
 
+yay -S --needed --noconfirm telegram-desktop-bin # telegram
 yay -S --needed --noconfirm qtile-extras # funcionalidad extra qtile
 yay -S --needed --noconfirm bibata-cursor-theme-bin # tema del ratón
-yay -S --needed --noconfirm code-marketplace # extensiones
+yay -S --needed --noconfirm phpstorm # ide
+yay -S --needed --noconfirm phpstorm-jre # ide
 yay -S --needed --noconfirm prismlauncher-qt5-bin # minecraft
 yay -S --needed --noconfirm losslesscut-bin # recortar vídeo
 yay -S --needed --noconfirm smile # selector emoji
 yay -S --needed --noconfirm qt5-styleplugins # tema oscuro qt
-yay -S --needed --noconfirm nautilus-open-any-terminal #plugin nautilus
+yay -S --needed --noconfirm onlyoffice-bin # office
 
 ###############################################################################
 #    PAQUETES LUTRIS                                                          #

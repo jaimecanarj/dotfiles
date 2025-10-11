@@ -1,9 +1,0 @@
-bradlc.vscode-tailwindcss
-catppuccin.catppuccin-vsc
-catppuccin.catppuccin-vsc-icons
-christian-kohler.path-intellisense
-esbenp.prettier-vscode
-formulahendry.auto-rename-tag
-oderwat.indent-rainbow
-prisma.prisma
-ritwickdey.liveserver

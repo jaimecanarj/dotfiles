@@ -71,14 +71,14 @@ keys = [
 
   # Programas
   Key([mod], "Return", lazy.spawn(terminal), desc="Terminal"),
-  Key([mod], "b", lazy.spawn("firefox"), desc="Firefox"),
-  Key([mod, "shift"], "b", lazy.spawn("firefox --private-window"), desc="Firefox privado"),
+  Key([mod], "b", lazy.spawn("zen-browser"), desc="Firefox"),
+  Key([mod, "shift"], "b", lazy.spawn("zen-browser --private-window"), desc="Firefox privado"),
   Key([mod], "e", lazy.spawn("nautilus --new-window"), desc="Explorador de archivos"),
   Key([mod], "r", lazy.spawn("rofi -show drun -theme ~/.config/rofi/launcher.rasi"), desc="Rofi"),
   Key([mod], "d", lazy.spawn("discord"), desc="Discord"),
   Key([mod], "s", lazy.spawn("steam"), desc="Steam"),
   Key([mod, "shift"], "s", lazy.spawn("lutris"), desc="Lutris"),
-  Key([mod], "c", lazy.spawn("code"), desc="Code"),
+  Key([mod], "c", lazy.spawn("/opt/PhpStorm/bin/phpstorm"), desc="PHPStorm"),
   Key([mod, "shift"], "m", lazy.spawn("/usr/bin/prismlauncher --launch Tormekia"), desc="Minecraft"),
   Key([mod], "period", lazy.spawn("smile"), desc="emoticonos"),
 
